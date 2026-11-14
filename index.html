@@ -1,0 +1,2618 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+    content="Bài trắc nghiệm Vocabulary and Grammar gồm 100 câu được chép từ hình ảnh tài liệu English CEFR B1.">
+  <title>Vocabulary and Grammar — B1 Quiz</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #172c24;
+      --muted: #617168;
+      --paper: #f4f6f2;
+      --card: #ffffff;
+      --line: #e1e8e1;
+      --green: #18734c;
+      --green-dark: #105b3a;
+      --mint: #e8f4ec;
+      --shadow: 0 10px 30px rgba(26, 55, 39, .06);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      line-height: 1.5;
+    }
+
+    button,
+    input,
+    select,
+    textarea {
+      font-family: inherit;
+    }
+
+    .shell {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 34px 24px 64px;
+    }
+
+    .masthead {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      padding-bottom: 22px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 750;
+      letter-spacing: .02em;
+    }
+
+    .brand-mark {
+      display: grid;
+      place-items: center;
+      width: 38px;
+      height: 38px;
+      border-radius: 12px;
+      background: var(--green);
+      color: white;
+      font-size: 17px;
+    }
+
+    .brand small {
+      display: block;
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 650;
+      letter-spacing: .12em;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      border: 1px solid #d9e6db;
+      background: #fff;
+      border-radius: 999px;
+      color: var(--green-dark);
+      padding: 7px 12px;
+      font-size: 12px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .tag-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #53a977;
+    }
+
+    .intro {
+      padding: 36px 0 25px;
+    }
+
+    .eyebrow {
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 9px 0 5px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(34px, 5vw, 52px);
+      line-height: 1.12;
+      letter-spacing: -.035em;
+    }
+
+    .section-title {
+      margin: 0;
+      color: #41574b;
+      font-size: 17px;
+      font-weight: 700;
+    }
+
+    .instruction {
+      margin: 13px 0 0;
+      color: #52645a;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 16px;
+      font-style: italic;
+    }
+
+    .notice {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      margin: 20px 0 24px;
+      padding: 13px 15px;
+      border: 1px solid #dce9df;
+      border-radius: 13px;
+      background: #edf5ef;
+      color: #42594b;
+      font-size: 13px;
+    }
+
+    .notice-icon {
+      font-weight: 800;
+      color: var(--green);
+    }
+
+    .config-screen[hidden],
+    .quiz-screen[hidden] {
+      display: none !important;
+    }
+
+    .config-panel {
+      padding: 17px;
+      border: 1px solid var(--line);
+      border-radius: 15px;
+      background: white;
+      box-shadow: var(--shadow);
+    }
+
+    .config-toolbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 14px;
+    }
+
+    .selection-count {
+      color: var(--green-dark);
+      font-size: 16px;
+      font-weight: 800;
+    }
+
+    .selection-help,
+    .visible-count {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .limit-control {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 4px 8px;
+      color: #4f6257;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .limit-control span {
+      grid-column: 1 / -1;
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 500;
+    }
+
+    .limit-input {
+      width: 94px;
+      min-height: 40px;
+      padding: 7px 9px;
+      border: 1px solid #d9e3da;
+      border-radius: 9px;
+      color: var(--ink);
+      font: inherit;
+      font-size: 15px;
+    }
+
+    .bank-control {
+      display: grid;
+      gap: 6px;
+      margin: 14px 0 0;
+      color: #4f6257;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .bank-select {
+      width: min(100%, 390px);
+      min-height: 42px;
+      padding: 8px 11px;
+      border: 1px solid #d9e3da;
+      border-radius: 10px;
+      background: white;
+      color: var(--ink);
+      font: inherit;
+      font-size: 14px;
+    }
+
+    .picker-thumbnail {
+      display: block;
+      max-width: min(180px, 70%);
+      max-height: 92px;
+      object-fit: contain;
+      margin: 9px 0 0 62px;
+      border: 1px solid #edf0ed;
+      border-radius: 8px;
+      background: #fbfcfb;
+    }
+
+    .question-image {
+      display: block;
+      width: min(100%, 520px);
+      max-height: 250px;
+      object-fit: contain;
+      margin: 2px auto 16px;
+      border: 1px solid #edf0ed;
+      border-radius: 10px;
+      background: #fff;
+    }
+
+    .filter-row {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: end;
+      gap: 12px;
+      margin: 14px 0;
+    }
+
+    .search-label {
+      display: grid;
+      gap: 6px;
+      color: #4f6257;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .search-input {
+      width: 100%;
+      min-height: 42px;
+      padding: 9px 12px;
+      border: 1px solid #d9e3da;
+      border-radius: 10px;
+      color: var(--ink);
+      font: inherit;
+      font-size: 14px;
+    }
+
+    .picker-list {
+      max-height: 58vh;
+      overflow: auto;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+    }
+
+    .picker-row {
+      padding: 12px 14px;
+      border-bottom: 1px solid #edf0ed;
+      background: white;
+    }
+
+    .picker-row:last-child {
+      border-bottom: 0;
+    }
+
+    .picker-row.selected {
+      background: #f1f8f3;
+    }
+
+    .picker-label {
+      display: grid;
+      grid-template-columns: 18px 34px minmax(0, 1fr);
+      align-items: start;
+      gap: 10px;
+      cursor: pointer;
+    }
+
+    .picker-label input {
+      margin: 4px 0 0;
+      accent-color: var(--green);
+    }
+
+    .picker-label input:disabled {
+      cursor: not-allowed;
+    }
+
+    .picker-number {
+      color: var(--green-dark);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .picker-question {
+      color: #304238;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 1.45;
+    }
+
+    .picker-options {
+      margin: 8px 0 0 62px;
+      color: #617168;
+      font-size: 12px;
+    }
+
+    .picker-options summary {
+      cursor: pointer;
+      width: fit-content;
+    }
+
+    .picker-options ul {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 5px 18px;
+      margin: 7px 0 2px;
+      padding-left: 19px;
+    }
+
+    .key-status {
+      margin: 8px 0 0 62px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .key-status.ready {
+      color: var(--green-dark);
+    }
+
+    .key-status.missing {
+      color: #9b5a15;
+    }
+
+    .question-editor {
+      margin: 10px 0 0 62px;
+      padding: 9px 11px;
+      border: 1px solid #e4ebe5;
+      border-radius: 10px;
+      background: #fbfcfb;
+    }
+
+    .question-editor summary {
+      color: var(--green-dark);
+      cursor: pointer;
+      font-size: 12px;
+      font-weight: 750;
+    }
+
+    .editor-content {
+      display: grid;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .editor-field {
+      display: grid;
+      gap: 5px;
+      color: #4f6257;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .editor-field textarea {
+      width: 100%;
+      min-height: 52px;
+      padding: 8px 9px;
+      border: 1px solid #d9e3da;
+      border-radius: 8px;
+      color: var(--ink);
+      font: inherit;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 1.4;
+      resize: vertical;
+    }
+
+    .editor-answer-list {
+      display: grid;
+      gap: 8px;
+    }
+
+    .editor-answer-row {
+      display: grid;
+      grid-template-columns: 22px minmax(0, 1fr) auto;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .editor-answer-letter {
+      color: var(--green-dark);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .editor-answer-row textarea {
+      width: 100%;
+      min-height: 48px;
+      padding: 7px 8px;
+      border: 1px solid #d9e3da;
+      border-radius: 8px;
+      color: var(--ink);
+      font: inherit;
+      font-size: 12px;
+      line-height: 1.4;
+      resize: vertical;
+    }
+
+    .correct-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      color: #476353;
+      font-size: 11px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .correct-toggle input {
+      accent-color: var(--green);
+    }
+
+    .editor-help,
+    .editor-status {
+      margin: 0;
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 500;
+    }
+
+    .editor-status {
+      min-height: 16px;
+      color: var(--green-dark);
+      font-weight: 700;
+    }
+
+    .editor-status.error {
+      color: #9b3b35;
+    }
+
+    .editor-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .editor-actions button {
+      padding: 8px 11px;
+      font-size: 12px;
+    }
+
+    .empty-search {
+      margin: 0;
+      padding: 20px;
+      color: var(--muted);
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .progress-card {
+      position: sticky;
+      top: 10px;
+      z-index: 4;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 7px 18px;
+      padding: 14px 17px;
+      margin: 0 0 20px;
+      border: 1px solid var(--line);
+      border-radius: 15px;
+      background: rgba(255, 255, 255, .96);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(8px);
+    }
+
+    .progress-label {
+      color: #4f6257;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .progress-count {
+      color: var(--green-dark);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .track {
+      grid-column: 1 / -1;
+      height: 7px;
+      overflow: hidden;
+      border-radius: 99px;
+      background: #eaf0eb;
+    }
+
+    .fill {
+      height: 100%;
+      width: 0;
+      border-radius: inherit;
+      background: linear-gradient(90deg, #278656, #70b888);
+      transition: width .2s ease;
+    }
+
+    .quiz-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      align-items: start;
+    }
+
+    .question-card {
+      min-width: 0;
+      padding: 18px 18px 16px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: var(--card);
+      box-shadow: 0 4px 16px rgba(26, 55, 39, .035);
+      scroll-margin-top: 112px;
+    }
+
+    .question-head {
+      display: flex;
+      align-items: flex-start;
+      gap: 11px;
+    }
+
+    .number {
+      flex: 0 0 auto;
+      display: grid;
+      place-items: center;
+      width: 29px;
+      height: 29px;
+      border-radius: 9px;
+      background: var(--mint);
+      color: var(--green-dark);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .prompt {
+      margin: 1px 0 13px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 17px;
+      font-weight: 600;
+      line-height: 1.48;
+    }
+
+    fieldset {
+      border: 0;
+      margin: 0;
+      padding: 0;
+      min-width: 0;
+    }
+
+    legend {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .options {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+    }
+
+    .option {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      min-height: 40px;
+      padding: 8px 9px;
+      border: 1px solid #e6ebe6;
+      border-radius: 10px;
+      color: #394a40;
+      cursor: pointer;
+      font-size: 13px;
+      line-height: 1.4;
+      transition: border-color .15s, background .15s, box-shadow .15s;
+    }
+
+    .option:hover {
+      border-color: #a9cbb4;
+      background: #f7fbf8;
+    }
+
+    .option:has(input:checked) {
+      border-color: #4e9a6d;
+      background: #edf7f0;
+      box-shadow: inset 0 0 0 1px #4e9a6d;
+      color: #163e2a;
+    }
+
+    .option input {
+      flex: 0 0 auto;
+      margin: 2px 0 0;
+      accent-color: var(--green);
+    }
+
+    .option-letter {
+      color: var(--green-dark);
+      font-weight: 800;
+    }
+
+    .actions {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 22px;
+      padding: 17px;
+      border: 1px solid var(--line);
+      border-radius: 15px;
+      background: white;
+    }
+
+    .actions-note {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .button-row {
+      display: flex;
+      gap: 9px;
+    }
+
+    .shuffle-actions {
+      margin: 0 0 16px;
+    }
+
+    button {
+      appearance: none;
+      border: 0;
+      border-radius: 10px;
+      padding: 11px 15px;
+      font: inherit;
+      font-size: 13px;
+      font-weight: 750;
+      cursor: pointer;
+    }
+
+    button:focus-visible,
+    input:focus-visible+span {
+      outline: 3px solid #b7d8c2;
+      outline-offset: 2px;
+    }
+
+    .primary {
+      background: var(--green);
+      color: white;
+    }
+
+    .primary:hover {
+      background: var(--green-dark);
+    }
+
+    .secondary {
+      border: 1px solid var(--line);
+      background: white;
+      color: #4d5e54;
+    }
+
+    .secondary:hover {
+      background: #f6f8f6;
+    }
+
+    .result {
+      display: none;
+      margin-top: 14px;
+      padding: 14px 16px;
+      border: 1px solid #d5e8da;
+      border-radius: 12px;
+      background: #eef7f0;
+      color: #244b33;
+      font-weight: 700;
+    }
+
+    .result.visible {
+      display: block;
+    }
+
+    .score-summary {
+      margin: 0 0 5px;
+      font-size: 18px;
+    }
+
+    .score-detail {
+      margin: 0;
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    .redo-button {
+      margin-top: 12px;
+    }
+
+    .option.correct-option {
+      border-color: #3d9560;
+      background: #e8f5ec;
+      color: #17472a;
+    }
+
+    .option.wrong-option {
+      border-color: #c65b55;
+      background: #fff0ef;
+      color: #762b28;
+    }
+
+    .feedback {
+      margin: 12px 0 0 40px;
+      color: #42604c;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .feedback.incorrect {
+      color: #9b3b35;
+    }
+
+    fieldset:disabled .option {
+      cursor: default;
+    }
+
+    .passage-card {
+      grid-column: 1 / -1;
+      padding: 26px 34px;
+      border: 1px solid #d9e6db;
+      border-radius: 16px;
+      background: #fff;
+      box-shadow: var(--shadow);
+    }
+
+    .passage-card h2 {
+      display: table;
+      margin: 4px auto 2px;
+      padding: 0 6px;
+      background: #fff3a3;
+      text-align: center;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: .01em;
+    }
+
+    .passage-card .passage-instruction {
+      margin: 0 0 14px;
+      color: var(--ink);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 15px;
+      font-weight: 800;
+      letter-spacing: 0;
+      text-transform: none;
+    }
+
+    .passage-card .passage-author {
+      margin: 0 0 12px;
+      color: var(--ink);
+      text-align: center;
+      font-family: Georgia, "Times New Roman", serif;
+      font-style: italic;
+      font-size: 15px;
+    }
+
+    .passage-card p.passage-text {
+      margin: 0 0 8px;
+      text-indent: 2em;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 16px;
+      line-height: 1.65;
+      text-align: justify;
+    }
+
+    .passage-card p.passage-text:last-child {
+      margin-bottom: 0;
+    }
+
+    .passage-card.collapsible {
+      padding: 0;
+    }
+
+    .passage-card.collapsible>summary {
+      padding: 14px 18px;
+      cursor: pointer;
+      font-weight: 750;
+      color: var(--green-dark);
+    }
+
+    .passage-card.collapsible>.passage-body {
+      padding: 0 24px 20px;
+    }
+
+    .passage-group {
+      padding: 10px 14px;
+      border-bottom: 1px solid #dfe9e1;
+      background: #eaf4ed;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 12px;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 1;
+    }
+
+    .passage-group strong {
+      color: var(--green-dark);
+      font-size: 14px;
+    }
+
+    .passage-group small {
+      color: var(--muted);
+      margin-left: 6px;
+      font-weight: 600;
+    }
+
+    .passage-group .button-row button {
+      padding: 6px 10px;
+      font-size: 12px;
+    }
+
+    .passage-group .danger {
+      border: 1px solid #e3bcb9;
+      background: white;
+      color: #9b3b35;
+    }
+
+    .reading-tools {
+      margin-top: 18px;
+      padding: 14px 16px;
+      border: 1px dashed #b9d3c1;
+      border-radius: 13px;
+      background: #f7fbf8;
+    }
+
+    .reading-tools>summary {
+      cursor: pointer;
+      color: var(--green-dark);
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .reading-form {
+      display: grid;
+      gap: 11px;
+      margin-top: 12px;
+    }
+
+    .reading-form label {
+      display: grid;
+      gap: 5px;
+      color: #4f6257;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .reading-form input,
+    .reading-form textarea {
+      width: 100%;
+      padding: 8px 10px;
+      border: 1px solid #d9e3da;
+      border-radius: 8px;
+      color: var(--ink);
+      font: inherit;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 1.45;
+    }
+
+    .reading-form textarea {
+      resize: vertical;
+    }
+
+    .reading-form pre {
+      margin: 0;
+      padding: 9px 11px;
+      border-radius: 8px;
+      background: #eef4ef;
+      color: #42594b;
+      font-size: 12px;
+      white-space: pre-wrap;
+    }
+
+    .reading-status {
+      min-height: 16px;
+      margin: 0;
+      color: var(--green-dark);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .reading-status.error {
+      color: #9b3b35;
+    }
+
+    .reading-tools[hidden] {
+      display: none;
+    }
+
+    .passage-card .blank {
+      display: inline-block;
+      min-width: 76px;
+      margin: 0 2px;
+      padding: 0 4px;
+      border-bottom: 2px solid var(--green);
+      color: var(--green-dark);
+      font-family: "Roboto", sans-serif;
+      font-size: 13px;
+      font-weight: 800;
+      text-align: center;
+      text-indent: 0;
+    }
+
+    .quiz-grid.single-col {
+      grid-template-columns: 1fr;
+    }
+
+    .quiz-grid.single-col .options {
+      grid-template-columns: 1fr;
+    }
+
+    footer {
+      padding: 28px 0 0;
+      color: #78867d;
+      text-align: center;
+      font-size: 12px;
+    }
+
+    @media (max-width: 760px) {
+      .shell {
+        padding: 20px 15px 42px;
+      }
+
+      .masthead {
+        padding-bottom: 16px;
+      }
+
+      .quiz-grid {
+        grid-template-columns: 1fr;
+        gap: 11px;
+      }
+
+      .intro {
+        padding: 27px 0 19px;
+      }
+
+      .progress-card {
+        top: 5px;
+      }
+
+      .picker-options ul {
+        grid-template-columns: 1fr;
+      }
+
+      .key-status,
+      .question-editor {
+        margin-left: 53px;
+      }
+
+      .editor-answer-row {
+        grid-template-columns: 20px minmax(0, 1fr);
+      }
+
+      .correct-toggle {
+        grid-column: 2;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .brand {
+        gap: 8px;
+        font-size: 14px;
+      }
+
+      .brand-mark {
+        width: 34px;
+        height: 34px;
+      }
+
+      .tag {
+        padding: 6px 9px;
+        font-size: 11px;
+      }
+
+      .question-card {
+        padding: 15px 13px 13px;
+      }
+
+      .prompt {
+        font-size: 16px;
+      }
+
+      .options {
+        grid-template-columns: 1fr;
+        gap: 6px;
+      }
+
+      .actions {
+        align-items: flex-start;
+      }
+
+      .button-row {
+        width: 100%;
+      }
+
+      .button-row button {
+        flex: 1;
+      }
+
+      .config-panel {
+        padding: 12px;
+      }
+
+      .picker-row {
+        padding: 11px 10px;
+      }
+
+      .picker-label {
+        grid-template-columns: 18px 28px minmax(0, 1fr);
+        gap: 7px;
+      }
+
+      .picker-options {
+        margin-left: 53px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="shell">
+    <header class="masthead">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">B1</span>
+        <span>English Practice<small id="brand-bank">VOCABULARY • GRAMMAR</small></span>
+      </div>
+      <span class="tag"><span class="tag-dot" aria-hidden="true"></span><span id="header-count">Cấu hình
+          đề</span></span>
+    </header>
+
+    <section class="config-screen" id="config-screen" aria-labelledby="config-title">
+      <div class="intro">
+        <div class="eyebrow">English CEFR B1</div>
+        <h1 id="config-title">Thiết lập đề kiểm tra</h1>
+        <p class="section-title" id="bank-section-title">Chọn câu hỏi từ ngân hàng 108 câu</p>
+        <label class="bank-control" for="question-bank">Ngân hàng câu hỏi
+          <select class="bank-select" id="question-bank">
+            <option value="vocabulary">Vocabulary and Grammar (108 câu)</option>
+            <option value="signs">Signs and Notices (40 câu)</option>
+            <option value="reading">Reading Passage</option>
+            <option value="cloze">Cloze Text</option>
+          </select>
+        </label>
+        <p class="instruction" id="config-instruction">Chọn từ 1 đến 30 câu để tạo đề. Có thể tìm theo nội dung, xem lựa
+          chọn, sửa câu hỏi và cài đặt đáp án đúng.</p>
+        <div class="notice"><span class="notice-icon" aria-hidden="true">i</span><span>Nội dung ban đầu giữ nguyên theo
+            nguồn. Có thể sửa từng câu, các lựa chọn và đặt đáp án đúng trong danh sách; chỉnh sửa được lưu trên trình
+            duyệt này. Đề không vượt quá 30 câu và thứ tự câu, lựa chọn A–D sẽ được trộn khi bắt đầu.</span></div>
+      </div>
+
+      <section class="config-panel" aria-label="Cấu hình câu hỏi">
+        <div class="config-toolbar">
+          <div>
+            <div class="selection-count" id="selection-count" aria-live="polite">0 / 30 câu đã chọn</div>
+            <div class="selection-help" id="selection-help">Chọn tối đa 30 câu cho đề này.</div>
+          </div>
+          <label class="limit-control" for="question-limit">Số câu tối đa/đề
+            <input class="limit-input" id="question-limit" type="number" min="1" max="30" step="1" value="30">
+            <span>Chọn từ 1 đến 30 câu.</span>
+          </label>
+          <div class="button-row">
+            <button class="secondary" id="random-select-button" type="button">Chọn ngẫu nhiên 30 câu</button>
+            <button class="secondary" id="clear-selection-button" type="button">Bỏ chọn</button>
+          </div>
+        </div>
+        <div class="filter-row">
+          <label class="search-label" for="question-search">Tìm câu hỏi
+            <input class="search-input" id="question-search" type="search" placeholder="Nhập từ khóa hoặc số câu"
+              autocomplete="off">
+          </label>
+          <span class="visible-count" id="visible-count">108 / 108 câu</span>
+        </div>
+        <div class="picker-list" id="question-picker" role="group" aria-label="Danh sách câu hỏi để chọn"></div>
+        <div class="actions">
+          <span class="actions-note">Có thể chọn ít hơn giới hạn đã đặt. Khi đủ số câu tối đa, các câu còn lại sẽ tạm
+            khóa.</span>
+          <button class="primary" id="create-selected-button" type="button" disabled>Tạo đề từ câu đã chọn</button>
+        </div>
+      </section>
+
+      <details class="reading-tools" id="reading-tools" hidden>
+        <summary id="rp-summary">+ Thêm bài đọc mới</summary>
+        <form class="reading-form" id="reading-form">
+          <label><span id="rp-title-label">Tiêu đề bài đọc</span>
+            <input id="rp-title" type="text" placeholder="Ví dụ: OUR SCHOOL NEWSPAPER" required>
+          </label>
+          <label>Tác giả / ghi chú (không bắt buộc)
+            <input id="rp-author" type="text" placeholder="Ví dụ: by Michael Williams">
+          </label>
+          <label><span id="rp-text-label">Nội dung bài đọc (cách đoạn bằng một dòng trống)</span>
+            <textarea id="rp-text" rows="8" required></textarea>
+          </label>
+          <label>Câu hỏi và đáp án
+            <textarea id="rp-questions" rows="10" required
+              placeholder="1. Câu hỏi?&#10;A. ...&#10;B. ...&#10;C. ...&#10;D. ...&#10;Answer: C"></textarea>
+          </label>
+          <pre
+            id="rp-format-help">Định dạng mỗi câu: dòng "số. câu hỏi", 4 dòng A. B. C. D., rồi dòng "Answer: X" (có thể ghi nhiều đáp án như "Answer: A, C"). Cách giữa các câu bằng một dòng trống. Bỏ dòng Answer nếu chưa có đáp án.</pre>
+          <p class="reading-status" id="rp-status" aria-live="polite"></p>
+          <div class="button-row"><button class="primary" type="submit">Lưu bài đọc</button></div>
+        </form>
+      </details>
+    </section>
+
+    <section class="quiz-screen" id="quiz-screen" hidden>
+      <section class="intro" aria-labelledby="page-title">
+        <div class="eyebrow">English CEFR B1</div>
+        <h1 id="page-title">Vocabulary and Grammar</h1>
+        <p class="section-title" id="quiz-section-title">A. Incomplete sentences</p>
+        <p class="instruction" id="quiz-instruction">Choose the best possible answer A, B, C or D for each sentence
+          below.</p>
+        <div class="notice"><span class="notice-icon" aria-hidden="true">i</span><span id="quiz-notice-text">Hoàn thành
+            đủ số câu đã chọn để xem điểm và phần đối chiếu đáp án. Hình ảnh nguồn không đánh dấu đáp án; khóa chấm được
+            xác định theo ngữ pháp và từ vựng.</span></div>
+        <div class="actions shuffle-actions">
+          <span class="actions-note">Có thể quay lại cấu hình để chọn bộ câu khác, hoặc tạo đề ngẫu nhiên gồm 30
+            câu.</span>
+          <div class="button-row">
+            <button class="secondary" id="configure-button" type="button">Chọn câu hỏi</button>
+            <button class="primary" id="shuffle-button" type="button">Tạo đề ngẫu nhiên 30 câu</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="progress-card" aria-label="Tiến độ bài làm">
+        <span class="progress-label">Tiến độ trả lời</span>
+        <span class="progress-count" id="progress-count">0 / 0</span>
+        <div class="track" role="progressbar" aria-label="Số câu đã trả lời" aria-valuemin="0" aria-valuemax="30"
+          aria-valuenow="0" id="progress-track">
+          <div class="fill" id="progress-fill"></div>
+        </div>
+      </section>
+
+      <form id="quiz-form">
+        <section class="quiz-grid" id="quiz" aria-label="Câu hỏi trắc nghiệm"></section>
+        <div class="actions">
+          <span class="actions-note">Lựa chọn được giữ lại trong trang này khi bạn di chuyển giữa các câu.</span>
+          <div class="button-row">
+            <button class="primary" type="submit">Hoàn tất bài làm</button>
+          </div>
+        </div>
+        <div class="result" id="result" role="status" aria-live="polite"></div>
+      </form>
+    </section>
+    <footer>English CEFR B1 · Quiz</footer>
+  </main>
+
+  <script>
+    const questions = [
+      { q: "Tim __________ the news, while his son was playing computer games.", a: ["is watching", "watches", "was watching", "watching"] },
+      { q: "Lenny __________ his old house two months ago.", a: ["were selling", "sells", "is selling", "sold"] },
+      { q: "He didn’t meet Joe and Alf, because they left __________ than they usually do.", a: ["early", "earlier", "earliest", "the earliest"] },
+      { q: "__________ you finish your report on time?", a: ["Was", "Are", "Did", "Were"] },
+      { q: "I was resting all day yesterday, because I was __________ tired.", a: ["terrible", "most terrible", "terribly", "more terribly"] },
+      { q: "Robert was crossing the street when he __________ Fred riding a motorcycle.", a: ["saw", "was seeing", "seeing", "is seeing"] },
+      { q: "This artist is __________ famous of all three that you mentioned.", a: ["the less", "least", "less", "the least"] },
+      { q: "That’s the boy __________ father is our teacher.", a: ["who", "which", "whose", "that"] },
+      { q: "Can you tell me __________ to put these boxes?", a: ["where", "when", "which", "who"] },
+      { q: "Mark, __________ is only twenty, teaches French.", a: ["which", "who", "when", "whose"] },
+      { q: "My doctor advised me to __________ a sport.", a: ["take off", "take after", "take up", "take on"] },
+      { q: "I can’t believe that they __________ your offer.", a: ["turned on", "turned off", "turned out", "turned down"] },
+      { q: "When I suggested a walk in the woods, he __________.", a: ["credited", "nodded", "raised", "shook"] },
+      { q: "After his mother’s __________, he moved to Argentina.", a: ["death", "strength", "power", "impression"] },
+      { q: "It was really __________ that nobody was hurt in that accident.", a: ["strong", "powerful", "incredible", "truthful"] },
+      { q: "Both my children are afraid __________ the dark.", a: ["of", "for", "on", "with"] },
+      { q: "They did everything in their __________ to keep the company.", a: ["truth", "strength", "impression", "power"] },
+      { q: "I bought a leather bag that __________ my new boots.", a: ["match", "matches", "suits", "suit"] },
+      { q: "Both her children have a very vivid __________.", a: ["description", "impression", "admiration", "imagination"] },
+      { q: "I’ve got the __________ that they’re living again.", a: ["impression", "admiration", "imagination", "description"] },
+      { q: "Teddy __________ of moving closer to the city centre.", a: ["thinks", "is thinking", "don’t think", "aren’t thinking"] },
+      { q: "We __________ giving you a lift home.", a: ["don’t mind", "aren’t minding", "doesn’t mind", "isn’t minding"] },
+      { q: "The Potters __________ to Dubai at 9:00 tomorrow morning.", a: ["is flying", "don’t fly", "doesn’t fly", "are flying"] },
+      { q: "__________ is your favorite European city?", a: ["When", "How", "Which", "Who"] },
+      { q: "__________ much do they charge for a single room with breakfast?", a: ["How", "Who", "What", "Where"] },
+      { q: "__________ is your brother talking to?", a: ["When", "Who", "Whose", "How"] },
+      { q: "The teacher __________ believe his excuse for not coming to school yesterday.", a: ["didn’t", "don’t", "used to not", "use to"] },
+      { q: "Bobby __________ skinny when he was a child.", a: ["was used to", "were", "used to be", "got used"] },
+      { q: "I __________ to contact Mr. Peterson twice, but didn’t find him.", a: ["tried", "tries", "used to try", "try"] },
+      { q: "After a couple of days, Sam finally __________ up early in the morning.", a: ["used to wake", "get used to wake", "wake", "got used to waking"] }
+      ,
+      { q: "It took him a month to recover __________ his illness.", a: ["for", "from", "of", "at"] },
+      { q: "The book exhibition took __________ at the Carlton Hotel.", a: ["part", "advantage", "it easy", "place"] },
+      { q: "I didn’t __________ Jason to come on time.", a: ["expect", "remember", "wait", "reminded"] },
+      { q: "I’m sorry but I can’t find it __________ the map.", a: ["over", "on", "between", "along"] },
+      { q: "They spent the whole day in Alexandria looking at the __________.", a: ["tasks", "part", "jobs", "sights"] },
+      { q: "He was lucky to find that __________ in their law firm.", a: ["job", "work", "site", "task"] },
+      { q: "I think that these trainers belong __________ your brother.", a: ["on", "in", "to", "at"] },
+      { q: "They usually take __________ of what I tell them.", a: ["their time", "part", "place", "no notice"] },
+      { q: "We never argue __________ our teacher.", a: ["with", "at", "on", "from"] },
+      { q: "This dish is very healthy because it consists __________ fish and vegetables.", a: ["on", "of", "at", "with"] },
+      { q: "At this time tomorrow, Gerry __________ his driving test.", a: ["shall take", "going to take", "shall have taken", "will be taking"] },
+      { q: "Henry __________ a shower as soon as he finishes cleaning his room.", a: ["will have had", "will have", "have", "is having"] },
+      { q: "Will you __________ painting the house by tomorrow?", a: ["finished", "going to fish", "have finished", "finishing"] },
+      { q: "Those cars are going really fast. There __________ an accident.", a: ["is", "will have been", "is going to be", "going to be"] },
+      { q: "They could take better pictures if they __________ a digital camera.", a: ["would have", "will have", "had", "are going to have"] },
+      { q: "If I __________ by the sea, I would go fishing every day.", a: ["lived", "would live", "live", "will be living"] },
+      { q: "Could I have __________ more apple juice, please?", a: ["no", "some", "any", "many"] },
+      { q: "I can’t drink this tea. There’s too __________ sugar in it.", a: ["much", "plenty", "many", "lot of"] },
+      { q: "How __________ teachers were there at the seminar yesterday?", a: ["some", "many", "any", "much"] },
+      { q: "Don’t leave. There are __________ more things I want to tell you.", a: ["few", "any", "little", "a few"] },
+      { q: "He finished my portrait yesterday, but he’s putting __________ at the moment.", a: ["it mildly", "the final touches", "ideas into my head", "an end to"] },
+      { q: "Do you think you could put __________ with the head teacher?", a: ["an end to", "it mildly", "the final touches", "in a good word for me"] },
+      { q: "I finally __________ trying to make him change his mind.", a: ["gave up", "gave out", "gave back", "gave off"] },
+      { q: "They told me to __________ these leaflets.", a: ["give off", "give out", "give up", "give in to"] },
+      { q: "They __________ the meeting because the chairman had to leave.", a: ["showed off", "paid off", "got off", "put off"] },
+      { q: "Andy loves __________ his brand-new sports car.", a: ["giving off", "putting off", "showing off", "cooling off"] },
+      { q: "I broke my leg as I was __________ the bus yesterday morning.", a: ["cooling off", "giving off", "paying off", "getting off"] },
+      { q: "According __________ Ned, that’s the best Chinese restaurant in the city.", a: ["of", "in", "at", "to"] },
+      { q: "Unfortunately, he didn’t succeed __________ getting the job after all.", a: ["in", "on", "for", "at"] },
+      { q: "Matt worked so hard that he finally made __________.", a: ["haste", "it to the top", "the most of", "difficult"] },
+      { q: "The Carltons have never __________ Denmark before.", a: ["been to", "gone to", "gone in", "been at"] },
+      { q: "Have you __________ thought of studying abroad?", a: ["since", "before", "never", "ever"] },
+      { q: "Danny __________ tennis since he was a child.", a: ["played", "plays", "been playing", "has been playing"] },
+      { q: "It has been raining heavily __________ our plane took off two hours ago.", a: ["while", "already", "since", "still"] },
+      { q: "Mr. Marfin __________ go on business trips very often.", a: ["need", "needs", "doesn’t have", "has to"] },
+      { q: "We can’t meet Jack today. We __________ to work overtime.", a: ["have", "must", "had better", "would rather"] },
+      { q: "I’d __________ join you for dinner than stay at home.", a: ["rather", "had better", "need", "must"] },
+      { q: "Luckily, we __________ wait for them. We can leave right now.", a: ["don’t have", "don’t need", "needn’t", "not have to"] },
+      { q: "She __________ still be at home. I talked to her on the phone a couple of minutes ago.", a: ["has to", "better", "must", "needs"] },
+      { q: "I __________ see an optician. I can’t see very clearly lately.", a: ["would rather", "may not", "might not", "had better"] },
+      { q: "My brother came __________ the flu last week and hasn’t recovered yet.", a: ["across", "apart", "up with", "down with"] },
+      { q: "Why don’t you ask Felix? He always comes __________ great ideas.", a: ["off", "up with", "down with", "apart"] },
+      { q: "They haven’t cleaned their attic __________.", a: ["for ages", "in the future", "in common", "out of the ordinary"] },
+      { q: "I really had no intention __________ insulting your father.", a: ["of", "for", "on", "at"] },
+      { q: "They aren’t interested __________ buying Steve’s country house.", a: ["to", "on", "in", "for"] },
+      { q: "We must __________ into consideration everything he said.", a: ["regard", "give", "think", "take"] },
+      { q: "We’re looking __________ seeing our grandparents.", a: ["after", "out", "over", "forward to"] },
+      { q: "Brad __________ his best to please his guests yesterday evening.", a: ["took", "did", "brought", "made"] },
+      { q: "Eating more fruit and vegetables will do you __________.", a: ["badly", "well", "good", "best"] },
+      { q: "I’m afraid that the new sales representative doesn’t __________ the manager.", a: ["get by", "get through", "get across", "get on well with"] },
+      { q: "I could __________ killed if the driver hadn’t stopped quickly.", a: ["have", "have been", "to have", "to have been"] },
+      { q: "If the meat __________ so tough, the children would have eaten it.", a: ["hadn’t been", "hasn’t been", "wouldn’t be", "wouldn’t have been"] },
+      { q: "If you hadn’t helped me, I __________ finished on time.", a: ["didn’t", "wouldn’t", "wouldn’t be", "wouldn’t have"] },
+      { q: "He wouldn't have believed me if he __________ it with his own eyes.", a: ["haven’t seen", "wouldn’t see", "hadn’t seen", "hadn’t been seen"] },
+      { q: "I wish I __________ answer all his questions.", a: ["can", "could", "had", "have to"] },
+      { q: "If only the fire brigade __________ earlier.", a: ["arrives", "has arrived", "was arriving", "had arrived"] },
+      { q: "He wishes he __________ so many mistakes.", a: ["made", "hadn’t made", "hasn’t made", "had made"] },
+      { q: "__________ these two books have the information I need.", a: ["None", "Not any", "Neither of", "Not of"] },
+      { q: "__________ Ian and Gerry took part in the competition.", a: ["Both", "Either", "Neither", "All"] },
+      { q: "__________ four of my friends have their own computer.", a: ["None", "All", "Either", "Both"] },
+      { q: "I thought I knew him very well, but it would never have gone __________ that he would decide to live abroad.", a: ["wild", "red", "bananas", "through my mind"] },
+      { q: "Liam and Ken have checked it. I'm sure nothing can __________.", a: ["go wrong", "go wild", "go red", "go over the top"] },
+      { q: "Dean is very shy. He always goes __________ when somebody talks to him.", a: ["bad", "red", "wrong", "through his mind"] },
+      { q: "It's very hot in here. Don't leave the fish out of the fridge because it will __________.", a: ["go wild", "go bananas", "go bad", "go over the top"] },
+      { q: "At __________, you’ve got your own bedroom now that you moved house.", a: ["last", "late", "lately", "later"] },
+      { q: "I've noticed that Helen hasn't been feeling very well __________.", a: ["latest", "later", "late", "lately"] },
+      { q: "I try not to have dinner __________ at night.", a: ["last", "late", "latest", "least"] },
+      { q: "You could at __________ phone me to let me know that you wouldn't come.", a: ["later", "late", "least", "latest"] },
+      { q: "I can't stand him anymore; I'm going to put things straight __________.", a: ["all over", "at all", "all the same", "once and for all"] },
+      { q: "__________, his comments on their behaviour seemed fair.", a: ["All over", "All in all", "At all", "All year round"] }
+    ];
+
+    const quiz = document.getElementById("quiz");
+    const form = document.getElementById("quiz-form");
+    const count = document.getElementById("progress-count");
+    const track = document.getElementById("progress-track");
+    const fill = document.getElementById("progress-fill");
+    const result = document.getElementById("result");
+    const configScreen = document.getElementById("config-screen");
+    const quizScreen = document.getElementById("quiz-screen");
+    const headerCount = document.getElementById("header-count");
+    const picker = document.getElementById("question-picker");
+    const selectionCount = document.getElementById("selection-count");
+    const selectionHelp = document.getElementById("selection-help");
+    const visibleCount = document.getElementById("visible-count");
+    const questionSearch = document.getElementById("question-search");
+    const questionLimitInput = document.getElementById("question-limit");
+    const createSelectedButton = document.getElementById("create-selected-button");
+    const randomSelectButton = document.getElementById("random-select-button");
+    const randomExamButton = document.getElementById("shuffle-button");
+    const MAX_QUESTIONS = 30;
+    let questionLimit = MAX_QUESTIONS;
+
+    questions.forEach((item, index) => { item.sourceNumber = index + 1; });
+    const originalQuestions = questions.map(item => ({ ...item, a: [...item.a] }));
+    const answerIndexes = [
+      [2],
+      [3],
+      [1],
+      [2],
+      [2],
+      [0],
+      [3],
+      [2],
+      [0],
+      [1],
+      [2],
+      [3],
+      [1],
+      [0],
+      [2],
+      [0],
+      [3],
+      [1],
+      [3],
+      [0],
+      [1],
+      [0],
+      [3],
+      [2],
+      [0],
+      [1],
+      [0],
+      [2],
+      [0],
+      [3],
+      [1],
+      [3],
+      [0],
+      [1],
+      [3],
+      [0],
+      [2],
+      [3],
+      [0],
+      [1],
+      [3],
+      [1],
+      [2],
+      [2],
+      [2],
+      [0],
+      [1],
+      [0],
+      [1],
+      [3],
+      [1],
+      [3],
+      [0],
+      [1],
+      [3],
+      [2],
+      [3],
+      [3],
+      [0],
+      [1],
+      [0],
+      [3],
+      [3],
+      [2],
+      [3],
+      [0],
+      [0],
+      [2],
+      [2],
+      [3],
+      [3],
+      [1],
+      [0],
+      [0],
+      [2],
+      [3],
+      [3],
+      [1],
+      [2],
+      [3],
+      [1],
+      [0],
+      [3],
+      [2],
+      [1],
+      [3],
+      [1],
+      [2],
+      [0],
+      [1],
+      [3],
+      [0],
+      [1],
+      [2],
+      [0],
+      [3],
+      [1],
+      [2],
+      [3],
+      [1]
+    ];
+    originalQuestions.forEach((item, index) => { item.correctIndexes = [...answerIndexes[index]]; });
+    const signsAnswerIndexes = [
+      [1],
+      [3],
+      [0],
+      [2],
+      [0],
+      [1],
+      [0],
+      [3],
+      [0],
+      [1],
+      [1],
+      [1],
+      [0],
+      [0],
+      [3],
+      [0],
+      [3],
+      [1],
+      [1],
+      [3],
+      [3],
+      [2],
+      [0],
+      [2],
+      [0],
+      [1],
+      [3],
+      [2],
+      [1],
+      [3],
+      [0],
+      [1],
+      [2],
+      [3],
+      [0],
+      [2],
+      [0],
+      [1],
+      [2],
+      [1]
+    ];
+    const signsQuestions = [{ "q": "", "a": ["Always keep this door open.", "Do not park in front of this entrance.", "Permission is needed to park here.", "Only use this entrance in an emergency."], "image": "notices/sign-01.png" }, { "q": "", "a": ["Drinks cannot be ordered at the bar.", "Use this machine when the bar is closed.", "There is a drinks machine in the bar.", "This machine is not working at the moment."], "image": "notices/sign-02.png" }, { "q": "", "a": ["The librarian needs to see your books before you go.", "Make sure you take all your books with you.", "Return your books before you leave the library.", "The librarian will show you where to put your books."], "image": "notices/sign-03.png" }, { "q": "", "a": ["This room cannot be used at present.", "This door must always be kept locked.", "Lock the room when it is not being used.", "Keep the key to this door in the room."], "image": "notices/sign-04.png" }, { "q": "", "a": ["Supersaver tickets can be used every day except Fridays.", "You need a special ticket to travel on a Friday.", "Supersaver tickets cannot be bought before the weekend.", "You can save money by traveling on a Friday."], "image": "notices/sign-05.png" }, { "q": "", "a": ["Do not forget to put your luggage outside your room.", "Keep the corridor clear of luggage.", "Bags left in the corridor will be removed.", "Bags will be collected from the corridor."], "image": "notices/sign-06.png" }, { "q": "", "a": ["Wait upstairs to see the nurse.", "Go upstairs to make an appointment with the nurse.", "The nurse will tell you when it is your turn.", "The nurse can only see patients with appointments."], "image": "notices/sign-07.png" }, { "q": "", "a": ["Do not touch the fruit before paying for it.", "Damaged fruit must be paid for.", "Self-service fruit is cheaper.", "Choose your fruit and then pay for it."], "image": "notices/sign-08.png" }, { "q": "", "a": ["Please be quiet while people are taking their examination.", "Do not talk to the examiner.", "Do not speak during the examination.", "The examiner will tell you when you can talk."], "image": "notices/sign-09.png" }, { "q": "", "a": ["Bring your computer here for repairs.", "We will not mend computers bought from other shops.", "We charge to repair computers not bought here.", "Computers bought here never need repairing."], "image": "notices/sign-10.png" }, { "q": "", "a": ["The entrance to the bank is through the library.", "The travel agency has moved its entrance.", "The library is now a travel agency.", "The travel agency is no longer open."], "image": "notices/sign-11.png" }, { "q": "", "a": ["This list shows who has been chosen to go on the trip.", "This list should be signed by people wanting to go on the trip.", "Check the list for information if you are going on the trip.", "If you find your name on this list, you can go on the trip."], "image": "notices/sign-12.png" }, { "q": "", "a": ["The new ticket office is now open.", "There will be two ticket offices after 17 September.", "This ticket office will be closed for one day.", "This ticket office will be closed on 16 September."], "image": "notices/sign-13.png" }, { "q": "", "a": ["If you spend less than £10, you cannot pay by credit card.", "We prefer cash for large sales.", "We make a charge if you pay by credit card.", "If you spend more than £10, you must pay by credit card."], "image": "notices/sign-14.png" }, { "q": "", "a": ["Dogs must walk outside.", "Dogs must walk with their owners.", "Dogs must be kept on a chain.", "Dogs must be held."], "image": "notices/sign-15.png" }, { "q": "", "a": ["Everything is cheaper this week.", "No extra charges next week.", "Usual prices this week.", "Cheaper prices next week."], "image": "notices/sign-16.png" }, { "q": "", "a": ["You can send your groceries from here.", "You can store your groceries here.", "You can get your free groceries here.", "You can have your groceries sent to you."], "image": "notices/sign-17.png" }, { "q": "", "a": ["Cleaning now costs twice as much.", "Cleaning costs are now cheaper.", "Cleaning costs are going up.", "Cleaning costs will stay the same."], "image": "notices/sign-18.png" }, { "q": "", "a": ["You must pay to park here.", "If you use the train you can park here.", "This space is for railway officials.", "No one is allowed to park here."], "image": "notices/sign-19.png" }, { "q": "", "a": ["You can buy your ticket during the journey.", "You pay when you get off.", "You have to book a seat before traveling.", "You have to buy a ticket before your journey."], "image": "notices/sign-20.png" }, { "q": "", "a": ["Passengers are allowed to change their seats.", "Passengers are allowed to eat snacks on the bus.", "Passengers can make noise on the bus.", "Passengers have to follow the bus rules."], "image": "notices/sign-21.png" }, { "q": "", "a": ["Knock the door if you want to enter when it does not open.", "Open the door when you want to enter.", "You are not allowed to enter when the door does not open.", "You are not allowed to enter if the door is open."], "image": "notices/sign-22.png" }, { "q": "", "a": ["It's unsafe to go ahead because the area is flooding.", "You will be drown if you turn around.", "You should go ahead if you want to avoid flooding area.", "If you can swim, you can go ahead."], "image": "notices/sign-23.png" }, { "q": "", "a": ["This is dogs’ play area.", "Children can play with dogs in this area.", "Dogs are not allowed to enter this area.", "People can take their dogs with them in this area."], "image": "notices/sign-24.png" }, { "q": "", "a": ["People must wear long sleeve shirt and trousers in this area.", "People must wear casual clothes in this area except long sleeve shirt and trousers.", "People have to wear formal clothes in this area except long sleeve shirt and trousers.", "Long sleeve shirt and trousers should be worn in this area."], "image": "notices/sign-25.png" }, { "q": "", "a": ["Pay attention to the kids when you are playing.", "You have to slow down your speed and be careful when you are driving in this area.", "You are not allowed to drive in this area.", "Driving is prohibited in this area."], "image": "notices/sign-26.png" }, { "q": "", "a": ["This area is for smoking only.", "This area is for eating only.", "This area is for drinking only.", "You are not allowed to smoke, eat and drink in this area."], "image": "notices/sign-27.png" }, { "q": "", "a": ["Only adults are permitted to drink alcohol on this site.", "People under 18 are not allowed to drink alcohol on this site.", "No one can drink alcohol on this site.", "You are permitted to buy alcohol on this site."], "image": "notices/sign-28.png" }, { "q": "", "a": ["People will give you a free drive when they see this sign.", "Drivers won’t stop when you want to hitchhike here.", "You are allowed to hitchhike when you see this sign.", "Hitch hiking is accepted here."], "image": "notices/sign-29.png" }, { "q": "", "a": ["Parents and visitors are free to enter the school.", "Visitors have to sign in at the office to enter the school.", "Parents don’t have to sign in at the office to enter the school.", "All parents and visitors have to sign in to receive a pass at the office in order to enter the school."], "image": "notices/sign-30.png" }, { "q": "", "a": ["Students can use their cell phones outside the school campus.", "Students are allowed to use cell phones in the school campus.", "Students have to submit their cell phones at the school gate before entering the school campus.", "Parents should keep their children’s cell phones before their children enter the school."], "image": "notices/sign-31.png" }, { "q": "", "a": ["There is no parking left in this area.", "This parking zone is used only for buses.", "Bus drivers are not allowed to stop here.", "This parking zone is used only for loading goods."], "image": "notices/sign-32.png" }, { "q": "", "a": ["It won't hurt if you are falling down.", "This area of work is safe.", "You will be in danger of falling if you don't work at a safe distance and don't use safety belt.", "You don't need to use a safety belt when you work on this site."], "image": "notices/sign-33.png" }, { "q": "", "a": ["Drivers can park in this area after 6 PM on Saturday and Sunday.", "Parking time in this area is from 7 AM to 6 PM Monday to Friday.", "Drivers are allowed to park their cars in this area before 7 AM and after 6 PM.", "Parking is not allowed in this area from 7 AM to 6 PM Monday through Friday."], "image": "notices/sign-34.png" }, { "q": "", "a": ["Avoid smoking and naked lights because this area is highly flammable.", "This is a non-smoker area.", "Naked lights aren’t allowed to be used in this area.", "Smokers should use naked lights to light their cigarettes in this area."], "image": "notices/sign-35.png" }, { "q": "", "a": ["We cannot deliver papers over the weekend.", "We plan to stop delivering papers five days from now.", "You must tell us five days early if you don't want papers.", "Please tell us if you don't want papers at the weekend."], "image": "notices/sign-36.png" }, { "q": "", "a": ["Accident patients are not admitted here.", "The emergency department is closed.", "This hospital only accepts accident patients.", "Contact this hospital in an emergency."], "image": "notices/sign-37.png" }, { "q": "", "a": ["Family tickets save time.", "Family tickets save money.", "Family tickets may be more expensive.", "Family tickets have gone down in price."], "image": "notices/sign-38.png" }, { "q": "", "a": ["Many people don’t want a motorway.", "Building the motorway starts today.", "People are going to talk about building a motorway.", "Everyone travelling on the motorway should meet here."], "image": "notices/sign-39.png" }, { "q": "", "a": ["You cannot bring your luggage into the dining room.", "You must look after your things yourself.", "You should give your things to the manager.", "You should lock your things in your suitcase."], "image": "notices/sign-40.png" }].map((item, index) => ({
+      ...item,
+      correctIndexes: [...signsAnswerIndexes[index]],
+      sourceNumber: 109 + index,
+      bankQuestionNumber: index + 1
+    }));
+    const QUESTION_EDITS_STORAGE_KEY = "b1QuizQuestionEditsV1";
+    function cloneQuestion(item) {
+      const copy = { ...item, a: [...item.a] };
+      if (Array.isArray(item.correctIndexes)) copy.correctIndexes = [...item.correctIndexes];
+      else delete copy.correctIndexes;
+      return copy;
+    }
+    function readQuestionEdits() {
+      try {
+        const saved = JSON.parse(window.localStorage.getItem(QUESTION_EDITS_STORAGE_KEY) || "{}");
+        return saved && typeof saved === "object" && !Array.isArray(saved) ? saved : {};
+      } catch {
+        return {};
+      }
+    }
+    function persistQuestionEdits() {
+      try {
+        window.localStorage.setItem(QUESTION_EDITS_STORAGE_KEY, JSON.stringify(savedQuestionEdits));
+        return true;
+      } catch {
+        return false;
+      }
+    }
+    function questionEditKey(bank, item) {
+      return bank + ":" + item.sourceNumber;
+    }
+    const READING_STORAGE_KEY = "b1QuizReadingPassagesV1";
+    const READING_INSTRUCTION = "Read the passage carefully and choose the correct answer among A, B, C, or D";
+    const BUILTIN_READING_PASSAGES = [
+      {
+        id: "text5",
+        label: "TEXT 5",
+        title: "OUR SCHOOL NEWSPAPER",
+        author: "by Michael Williams",
+        paragraphs: [
+          "Some years ago, our head teacher, Mrs Waters, decided to start a school newspaper, and to get as many students as possible to take on the job of producing it - and parents, too. She felt the newspaper would help them learn more about school life, through articles on things like sports achievements and arts projects, which not all students know about if they're not taking part. Students took the whole thing very seriously - and we now have a prize-winning newspaper!",
+          "Some of my friends joined the newspaper team immediately and enjoyed it. I'd always loved creative writing and drawing cartoons, which I thought would be perfect in the newspaper, so I signed up. My dad, who's a journalist, was pleased - he thought that even though I wasn't keen on a job like his, the newspaper would be a great opportunity for me. And he was right - I loved it! Dad often came along to give advice, which was popular with the students. It was difficult sometimes, if he was busy, but he learned a lot about the school that way.",
+          "My first job was writing a report about a sports event - a writing style I'd never attempted before. But Dad reminded me it was similar to writing a story - getting information in the right order. Once I'd understood that, there was no stopping me - and after my first efforts, I developed quite a personal style, which was brilliant. Sometimes the team couldn't use what I'd written, or my cartoons, for whatever reason, but I didn't mind. And sometimes it was hard to finish stuff on time, but I usually got there.",
+          "I'm now one of the editors - we decide what goes into the newspaper, so our names no longer appear in print. And it's stressful sometimes as we don't have much time, but we try to manage that properly. We also correct mistakes in people's articles, which we all had to get used to, but we were soon doing it without thinking - and in our own schoolwork, too. I still put off calling people outside school for comments on stuff, but I guess it's all good experience - at least, that's what Dad says!"
+        ],
+        questions: [
+          { q: "Michael's head teacher wanted to start a student newspaper to", a: ["provide an activity for students not interested in sport or art.", "make students feel more confident about taking part in something.", "keep students better informed about what was happening at school.", "give students the experience of being responsible for something."], correctIndexes: [2] },
+          { q: "Michael decided to join the newspaper because", a: ["he had ideas about some work he could do for it.", "he was considering a career in journalism.", "his friends had encouraged him to do so.", "he liked the idea of being part of a team."], correctIndexes: [0] },
+          { q: "When Michael first started working on the newspaper, he was", a: ["disappointed when his stories sometimes weren't used.", "delighted at the way his writing skills improved.", "pleased to find he could make use of his art skills.", "worried he'd be late completing some of his writing."], correctIndexes: [1] },
+          { q: "What does Michael say about his role on the newspaper now?", a: ["He feels uncomfortable about correcting other students' work.", "He still needs to improve the way he manages his time.", "He's happier to handle making telephone calls to others.", "He's become better at making articles more accurate."], correctIndexes: [3] },
+          { q: "What would Michael's dad say about the newspaper?", a: ["I was surprised at how keen Michael was to get involved - he's never shown that much interest in writing before.", "I occasionally had problems finding the time to help out at Michael's school, but the students really seemed to like my suggestions.", "Michael would never admit it, but I know he's proud to see his name in the newspaper these days - and I am, too!", "It's been great to finally find out about life at the school through reading the newspaper. I didn't really know much about it before."], correctIndexes: [1] }
+        ]
+      },
+      {
+        id: "text7",
+        label: "TEXT 7",
+        title: "SO WHAT HAPPENS AFTER SCHOOL?",
+        author: "By Sam Adam",
+        paragraphs: [
+          "I was wondering what I should do with my life when I finish school. My parents told me that I still had a couple of years ahead of me but that did not reassure me. So I went online and found everything about career advisors.",
+          "Most secondary schools in England have members of staff who give careers advice to their students. They are called careers advisors. A year before they leave school, the careers advisor will talk to the students one by one and ask them what they want to do in the future. The advisor will look at the students' grades to see what subjects they are stronger in. For example, if they are good at maths, they can become an accountant.",
+          "The advice is not just about the part of finding a job; it's also telling the student what university course they must do first. If a student wants to become a lawyer, he or she will have to go to university for three or four years to study law. However, if someone wants to be a doctor, they will need good grades in biology and other science subjects. With good grades, they can go to university and do their basic medical training which is six years. But their studying doesn't finish at university. They then have to study at a hospital for another two or three years.",
+          "The careers advisor also helps students who don't have the grades to go to university. The advisor helps the students with their CVs and shows them how to find and apply for jobs. Sometimes there are short courses they can do to learn a new skill quickly. For example, they can go on a hairdressing course and then learn more while they work. Some organizations offer training on the job, such as factories and farms. The government has many areas which offer possibilities for those who can't go to university. Students can join the army and be trained to become soldiers, or if they want, they could become sailor with the Navy.",
+          "So I guess that now I shouldn't be feeling so anxious. When the time comes, I'll make sure I'll ask a careers advisor for help."
+        ],
+        questions: [
+          { q: "How do career advisors meet the students?", a: ["in a small group", "in individual meetings", "all the class together", "the whole school at the same time"], correctIndexes: [1] },
+          { q: "What does the advisor look for before giving advice?", a: ["what the student isn't very good at", "university courses in other countries", "what the student is better at", "the student's CV and folder"], correctIndexes: [2] },
+          { q: "What happens after studying medicine at a university?", a: ["The student must go on to study biology as well.", "The student can train others to become doctors, too.", "The student can practice medicine immediately after.", "The student carries on learning for another few years."], correctIndexes: [1] },
+          { q: "How do advisors help students with not very good grades?", a: ["They show them the best way to get a job.", "They help them with on-the-job training.", "They give extra classes to help them get to university.", "They take them to a farm and a factory to show them their options."], correctIndexes: [1] },
+          { q: "What would Sam text to a friend who seeks career advice?", a: ["I'm as worried as you are as I don't know what options are available for us.", "I guess you could ask your parents for help; that's what I did.", "There is no need to panic as there are people at school that can help you with that.", "Your teachers will make career decisions for you so that you don't have to deal with it."], correctIndexes: [2] }
+        ]
+      },
+      {
+        id: "text16",
+        label: "TEXT 16",
+        title: "GIVING BACK TO THE PEOPLE",
+        author: "",
+        paragraphs: [
+          "Ever since she arrived on the pop scene in the early eighties, Madonna has remained one of the most well-known celebrities in the world. She has shown herself to be a talented singer, dancer, songwriter and actress. Having achieved all this, one cannot doubt that she has a strong belief in herself and her abilities. She seems to have gained such a strong personality through her own painful childhood experiences. She went to a strict Catholic school, was one of many children, and her family was split up after her mother died from cancer.",
+          "Eventually, in search of fame, she left college and went to New York with only her suitcase and a few dollars. Madonna became one of the biggest stars on the planet, and has sold over 200 million records worldwide, making her the most successful solo artist alive. Few, though, may have realised that her rough start in life is exactly what made her so determined to get ahead and to decide to help so many others.",
+          "Madonna's single cause over the past 10 years of her life is to give back to the people as much as she can. This is why she has made such a huge effort to bring an end to the extreme poverty and hardship experienced by Malawi's 2 million orphans. She founded Raising Malawi, a non-profit organisation that gives children in Malawi food, clothing, shelter, education, medical care and psychological support. At the same time, she supports other non-government organisations that offer many poor African families opportunities to earn money themselves. These programmes try to change the lives of these people once and for all.",
+          "It makes you wonder, doesn't it? What would happen if every one of us, just like Madonna did, gave back to those in need? Without a doubt, the world would be such a better place to live in. And it's not simply because certain people would be able to have the things that they should have never lived without in the first place, but also because through volunteering and charity, everyone can become a better person, experiencing benefits one would have never even imagined."
+        ],
+        questions: [
+          { q: "Madonna's career...", a: ["is steadily in decline since her first appearance in the eighties.", "has not been limited to the pop scene.", "has been down to luck rather than talent.", "is the result of a lifetime of opportunities."], correctIndexes: [1] },
+          { q: "As a child, Madonna was probably...", a: ["happiest during her school days.", "lonely and without anyone to talk to.", "unhappy in New York.", "made stronger due to difficult events."], correctIndexes: [3] },
+          { q: "What does the writer say about Madonna's success?", a: ["She is the best-selling artist alive.", "She earned a lot of money early on in her career.", "Her success is mainly due to luck.", "Her move to New York didn't help much with her career."], correctIndexes: [0] },
+          { q: "According to the text Raising Malawi...", a: ["has earned Madonna a lot of money.", "is a charity that helps poor African families.", "tries to make a difference in the lives of many children in Malawi", "has failed to attract other's attention to the issues it deals with."], correctIndexes: [2] },
+          { q: "How would the writer probably describe Madonna?", a: ["\"She is a woman that may seem to care for others but in fact only does so for herself.\"", "\"She has failed to achieve what she could have because of a life of hardship that eventually brought her down.\"", "\"Her success doesn't mean much to her as she always wants to become better and better.\"", "\"What she is truly passionate about is helping those in need have a better future.\""], correctIndexes: [3] }
+        ]
+      },
+      {
+        id: "text20",
+        label: "TEXT 20",
+        title: "GETTING FIT AND SLIM",
+        author: "",
+        paragraphs: [
+          "I know that many people, myself included, each year make a promise to themselves to get fit and slim, join a gym and start a diet. But what happens to these gym visits and the lettuce diet? At least half of us who try to get fit and thinner give up after less than a month. Many people seem to blame their failure on lack of time. Lack of willpower is even more important, though.",
+          "Much of this has to do with the fact that we set unrealistic fitness goals - a flat stomach in eight weeks and a celebrity diet plan - instead of doing what we know will have the best results in the long term: exercising a bit more and eating a bit less. Most fitness clubs get many new members from January to March, but their use of the gym tends to decline after that. So how can someone beat the temptation to give up? First, no one should expect to fail as soon as they start; we must stay positive, even if we've failed before.",
+          "Many people are fooled into believing that they really need to follow an expensive fitness and eating plan. But this is simply not true. The only correct answer seems to be to search for the thing that really interests and motivates you. It's fine to have many small motivations, but you should write them down and put them together to make a list of things to keep you going.",
+          "You also need to change the way you think about things. Women, for example, feel particularly guilty about exercising two or three hours a week, thinking this is 'selfish time' that takes them away from responsibilities to family and friends. But it is much better to see this as vital 'self-care' time. Many people also think that three hours is a lot of time out of their ordinary week, but as we spend around 98 hours a week awake, that leaves us nearly 95 hours to do everything else that we need to do."
+        ],
+        questions: [
+          { q: "What is true of most people at the start of the year?", a: ["They have already given up getting fit.", "They are not sure whether they'll continue exercising.", "They decide to make an effort to get fit.", "They are too bored to start exercising."], correctIndexes: [2] },
+          { q: "What is the main reason why people give up exercising?", a: ["They haven't got enough time.", "They have no one to exercise with them.", "They do not really want to do it.", "They have tried too many times before."], correctIndexes: [2] },
+          { q: "Another reason why people quit a fitness programme is that", a: ["They have achieved their goals.", "They expect too much of themselves.", "They become too tired.", "They can't afford to continue."], correctIndexes: [1] },
+          { q: "In order to continue a successful fitness programme", a: ["You need to find a strong and lasting reason.", "You need a friend to exercise with.", "You can't avoid suffering for many hours.", "Your friends and family will have to suffer."], correctIndexes: [0] },
+          { q: "What would the writer say about exercise?", a: ["It isn't actually worth of all this effort because of how slow the results are.", "No one should overtire themselves because it does not make much difference.", "Going to the gym is a waste of time and very boring.", "If you really want to get fit, you need to find the time and a reason why and then commit to it."], correctIndexes: [3] }
+        ]
+      }
+    ];
+    function readCustomReading() {
+      try {
+        const saved = JSON.parse(window.localStorage.getItem(READING_STORAGE_KEY) || "null");
+        if (saved && Array.isArray(saved.passages)) {
+          return { nextSource: Number(saved.nextSource) || 1001, passages: saved.passages };
+        }
+      } catch { }
+      return { nextSource: 1001, passages: [] };
+    }
+    const customReading = readCustomReading();
+    function persistCustomReading() {
+      try {
+        window.localStorage.setItem(READING_STORAGE_KEY, JSON.stringify(customReading));
+        return true;
+      } catch {
+        return false;
+      }
+    }
+    const CLOZE_STORAGE_KEY = "b1QuizClozePassagesV2";
+    const CLOZE_INSTRUCTION = "Fill in each numbered blank with one suitable word or phrase";
+    const BUILTIN_CLOZE_PASSAGES = [
+      {
+        id: "cloze8",
+        label: "TEXT 8",
+        title: "THE DRIEST PLACE ON EARTH",
+        author: "",
+        paragraphs: [
+          "The Atacama Desert in Chile is known as the driest place on Earth. It is almost 1,000 kilometers (1) length, lying between the Pacific Ocean and the Andes mountains. Under a centimeter of rain (2) annually, and the center is so dry (3) scientists have never recorded (4) rain there.",
+          "Over a million people (5) live in the Atacama today. Most live on the coast, which is also home to teams of astronomers who are there to (6) advantage of the clear skies. In the north, farmers grow tomatoes with water they have collected from underground rocks. However, for (7) who have their farms on higher ground, the water comes from melting snow.",
+          "People generally seem to (8) knowledge about what the desert has to offer, but in (9), there is plenty to do – from seeing the amazing natural sights to playing golf, one of the more recent activities (10) tourists to the region."
+        ],
+        questions: [
+          { q: "(1)", a: ["by", "at", "to", "in"], correctIndexes: [3] },
+          { q: "(2)", a: ["pours", "falls", "sinks", "lowers"], correctIndexes: [1] },
+          { q: "(3)", a: ["as", "that", "when", "than"], correctIndexes: [1] },
+          { q: "(4)", a: ["any", "no", "some", "little"], correctIndexes: [0] },
+          { q: "(5)", a: ["totally", "exactly", "actually", "finally"], correctIndexes: [2] },
+          { q: "(6)", a: ["have", "make", "get", "take"], correctIndexes: [3] },
+          { q: "(7)", a: ["those", "these", "them", "they"], correctIndexes: [0] },
+          { q: "(8)", a: ["fail", "lose", "miss", "lack"], correctIndexes: [3] },
+          { q: "(9)", a: ["case", "turn", "fact", "time"], correctIndexes: [2] },
+          { q: "(10)", a: ["arriving", "attracting", "approaching", "arranging"], correctIndexes: [1] }
+        ]
+      },
+      {
+        id: "cloze9",
+        label: "TEXT 9",
+        title: "ALPACAS",
+        author: "",
+        paragraphs: [
+          "Alpacas were first kept by the Inca people in the mountains of South America, more than six thousand years ago. These animals (1) clothes, food, and fuel for their owners. The softest wool was (2) worn by the leaders of Incan society though.",
+          "When Spanish explorers (3) in the fifteenth century, sheep were introduced and these gradually (4) alpacas in the region. It wasn't (5) the middle of the 20th century that both farmers and fashion designers began to recognize the (6) of alpacas again. They are easy to look (7) since they eat grass and are used to low temperatures. Their wool, which comes in a (8) of natural colors from white to dark brown, is lighter and warmer than sheep's wool and (9) strong.",
+          "It is not surprising (10) that alpacas are becoming a familiar sight in the fields of North America, Australia, and the UK."
+        ],
+        questions: [
+          { q: "(1)", a: ["supported", "provided", "turned", "gained"], correctIndexes: [1] },
+          { q: "(2)", a: ["mainly", "fully", "extremely", "absolutely"], correctIndexes: [0] },
+          { q: "(3)", a: ["reached", "delivered", "arrived", "transferred"], correctIndexes: [2] },
+          { q: "(4)", a: ["retired", "removed", "returned", "replaced"], correctIndexes: [3] },
+          { q: "(5)", a: ["until", "after", "during", "before"], correctIndexes: [0] },
+          { q: "(6)", a: ["prizes", "rewards", "qualities", "points"], correctIndexes: [2] },
+          { q: "(7)", a: ["at", "after", "for", "like"], correctIndexes: [1] },
+          { q: "(8)", a: ["row", "group", "range", "crowd"], correctIndexes: [2] },
+          { q: "(9)", a: ["only", "also", "instead", "too"], correctIndexes: [1] },
+          { q: "(10)", a: ["therefore", "already", "otherwise", "enough"], correctIndexes: [0] }
+        ]
+      },
+      {
+        id: "cloze10",
+        label: "TEXT 10",
+        title: "HORSES",
+        author: "",
+        paragraphs: [
+          "Horses have been valuable to humans for thousands of years. Because there are several different (1) of horses such as coldbloods, which are large but gentle, or hotbloods that are (2) for their running ability, there are horses for every purpose. We use them for transport as (3) as for physical work, for example (4) farm machinery. It's now also very (5) to see horses used in sports.",
+          "Horses need food and water in large (6). A horse can drink (7) twenty and forty liters of water a day, and around a kilo of food for (8) fifty kilos of its body weight. Horses need to be out in the fields, as grass is part of their diet.",
+          "They can live for (9) 25 years, so their owners need to give them (10) of love and attention – but horses always give lots back."
+        ],
+        questions: [
+          { q: "(1)", a: ["makes", "style", "marks", "sorts"], correctIndexes: [0] },
+          { q: "(2)", a: ["known", "noticed", "familiar", "realized"], correctIndexes: [0] },
+          { q: "(3)", a: ["long", "far", "well", "soon"], correctIndexes: [2] },
+          { q: "(4)", a: ["going", "pulling", "taking", "doing"], correctIndexes: [1] },
+          { q: "(5)", a: ["obvious", "clear", "common", "regular"], correctIndexes: [2] },
+          { q: "(6)", a: ["totals", "sums", "taking", "amount"], correctIndexes: [3] },
+          { q: "(7)", a: ["from", "between", "about", "beyond"], correctIndexes: [1] },
+          { q: "(8)", a: ["both", "any", "every", "all"], correctIndexes: [2] },
+          { q: "(9)", a: ["after", "through", "over", "towards"], correctIndexes: [2] },
+          { q: "(10)", a: ["plenty", "more", "full", "enough"], correctIndexes: [0] }
+        ]
+      },
+      {
+        id: "cloze11",
+        label: "TEXT 11",
+        title: "WOOL",
+        author: "",
+        paragraphs: [
+          "Wool comes from sheep and certain other animals like goats and rabbits. Over a million tonnes of wool is produced every year, of (1) 60% goes into clothes. The wool that is used (2) comes from Australian Merino sheep. Their wool is good for baby clothes, as it is soft, (3) babies warm, and can (4) their bodies.",
+          "When wool is first cut from the sheep, it (5) a high level of valuable oil, so before the wool is used, it must be cleaned. The (6) way to do this is by putting the wool in warm water. The oil that is (7) from the wool is widely used in products like hand creams.",
+          "Sheep were first used by humans several thousand years ago, (8) it is believed that this was for meat (9) than wool. When people developed a way of cutting the wool from sheep it (10) a more important material."
+        ],
+        questions: [
+          { q: "(1)", a: ["what", "whose", "which", "that"], correctIndexes: [2] },
+          { q: "(2)", a: ["mostly", "nearly", "properly", "truly"], correctIndexes: [0] },
+          { q: "(3)", a: ["stays", "helps", "rests", "keeps"], correctIndexes: [3] },
+          { q: "(4)", a: ["protect", "wrap", "care", "save"], correctIndexes: [0] },
+          { q: "(5)", a: ["involves", "contains", "receives", "consists"], correctIndexes: [1] },
+          { q: "(6)", a: ["simplest", "clearest", "plainest", "nearest"], correctIndexes: [0] },
+          { q: "(7)", a: ["carried", "passed", "removed", "divided"], correctIndexes: [2] },
+          { q: "(8)", a: ["while", "but", "or", "because"], correctIndexes: [1] },
+          { q: "(9)", a: ["rather", "instead", "apart", "except"], correctIndexes: [0] },
+          { q: "(10)", a: ["arrived", "turned", "grew", "became"], correctIndexes: [3] }
+        ]
+      }
+    ];
+
+    // Reset dữ liệu Cloze Text cũ đã lưu trong LocalStorage của trình duyệt
+    try {
+      window.localStorage.removeItem("b1QuizClozePassagesV1");
+      const editsRaw = window.localStorage.getItem(QUESTION_EDITS_STORAGE_KEY);
+      if (editsRaw) {
+        const edits = JSON.parse(editsRaw);
+        let changed = false;
+        Object.keys(edits).forEach(key => {
+          if (key.startsWith("cloze:")) {
+            delete edits[key];
+            changed = true;
+          }
+        });
+        if (changed) {
+          window.localStorage.setItem(QUESTION_EDITS_STORAGE_KEY, JSON.stringify(edits));
+        }
+      }
+    } catch { }
+    function readCustomCloze() {
+      try {
+        const saved = JSON.parse(window.localStorage.getItem(CLOZE_STORAGE_KEY) || "null");
+        if (saved && Array.isArray(saved.passages)) {
+          return { nextSource: Number(saved.nextSource) || 6001, passages: saved.passages };
+        }
+      } catch { }
+      return { nextSource: 6001, passages: [] };
+    }
+    const customCloze = readCustomCloze();
+    function persistCustomCloze() {
+      try {
+        window.localStorage.setItem(CLOZE_STORAGE_KEY, JSON.stringify(customCloze));
+        return true;
+      } catch {
+        return false;
+      }
+    }
+    const readingPassages = [];
+    const readingSourceQuestions = [];
+    const clozeSourceQuestions = [];
+    function addReadingPassage(passage, firstSource, bank = "reading") {
+      passage.bank = bank;
+      readingPassages.push(passage);
+      const targetList = bank === "cloze" ? clozeSourceQuestions : readingSourceQuestions;
+      passage.questions.forEach((item, index) => {
+        targetList.push({
+          q: item.q,
+          a: [...item.a],
+          correctIndexes: Array.isArray(item.correctIndexes) ? [...item.correctIndexes] : undefined,
+          passageId: passage.id,
+          sourceNumber: item.sourceNumber || firstSource + index
+        });
+      });
+    }
+    BUILTIN_READING_PASSAGES.forEach((passage, index) => addReadingPassage(passage, 201 + index * 50));
+    customReading.passages.forEach(passage => addReadingPassage(passage));
+    BUILTIN_CLOZE_PASSAGES.forEach((passage, index) => addReadingPassage(passage, 5001 + index * 50, "cloze"));
+    customCloze.passages.forEach(passage => addReadingPassage(passage, undefined, "cloze"));
+    function renumberReading(bank) {
+      bank.forEach((item, index) => { item.bankQuestionNumber = index + 1; });
+    }
+    renumberReading(readingSourceQuestions);
+    renumberReading(clozeSourceQuestions);
+    const sourceQuestionBanks = {
+      vocabulary: originalQuestions.map(cloneQuestion),
+      signs: signsQuestions.map(cloneQuestion),
+      reading: readingSourceQuestions.map(cloneQuestion),
+      cloze: clozeSourceQuestions.map(cloneQuestion)
+    };
+    const questionBanks = {
+      vocabulary: originalQuestions.map(cloneQuestion),
+      signs: signsQuestions.map(cloneQuestion),
+      reading: readingSourceQuestions.map(cloneQuestion),
+      cloze: clozeSourceQuestions.map(cloneQuestion)
+    };
+    let savedQuestionEdits = readQuestionEdits();
+    Object.entries(savedQuestionEdits).forEach(([key, edit]) => {
+      const match = key.match(/^(vocabulary|signs|reading|cloze):(\d+)$/);
+      if (!match || !edit || typeof edit !== "object") return;
+      const item = questionBanks[match[1]].find(question => question.sourceNumber === Number(match[2]));
+      if (!item) return;
+      if (typeof edit.q === "string") item.q = edit.q;
+      if (Array.isArray(edit.a) && edit.a.length === 4 && edit.a.every(answer => typeof answer === "string")) {
+        item.a = [...edit.a];
+      }
+      if (Array.isArray(edit.correctIndexes) && edit.correctIndexes.every(index =>
+        Number.isInteger(index) && index >= 0 && index < 4
+      )) {
+        item.correctIndexes = [...new Set(edit.correctIndexes)];
+      }
+    });
+    const questionBankSelect = document.getElementById("question-bank");
+    let currentBank = "vocabulary";
+    let currentQuestionPool = questionBanks[currentBank];
+
+    const selectedQuestionNumbers = new Set();
+    const configureButton = document.getElementById("configure-button");
+    let activeQuestions = [];
+    let currentAttemptQuestions = [];
+
+    function shuffled(items) {
+      const copy = items.slice();
+      for (let i = copy.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [copy[i], copy[j]] = [copy[j], copy[i]];
+      }
+      return copy;
+    }
+
+    function readingPassageById(id) {
+      return readingPassages.find(passage => passage.id === id);
+    }
+
+    function isPassageBank() {
+      return currentBank === "reading" || currentBank === "cloze";
+    }
+
+    function buildPassageBody(passage) {
+      const frag = document.createDocumentFragment();
+      if (passage.author) {
+        const author = document.createElement("p");
+        author.className = "passage-author";
+        author.textContent = passage.author;
+        frag.append(author);
+      }
+      passage.paragraphs.forEach(text => {
+        const p = document.createElement("p");
+        p.className = "passage-text";
+        if (passage.bank === "cloze") {
+          text.split(/\((\d+)\)/).forEach((part, index) => {
+            if (index % 2 === 0) {
+              p.append(document.createTextNode(part));
+            } else {
+              const blank = document.createElement("span");
+              blank.className = "blank";
+              blank.textContent = "(" + part + ") ______";
+              p.append(blank);
+            }
+          });
+        } else {
+          p.textContent = text;
+        }
+        frag.append(p);
+      });
+      return frag;
+    }
+
+    function renderPassageCard(passage) {
+      const card = document.createElement("section");
+      card.className = "passage-card";
+      const instruction = document.createElement("p");
+      instruction.className = "passage-instruction";
+      instruction.textContent = (passage.label ? passage.label + ": " : "") +
+        (passage.bank === "cloze" ? CLOZE_INSTRUCTION : READING_INSTRUCTION);
+      const title = document.createElement("h2");
+      title.textContent = passage.title;
+      card.append(instruction, title, buildPassageBody(passage));
+      return card;
+    }
+
+    function pickRandomQuestions() {
+      if (!isPassageBank()) return shuffled(currentQuestionPool).slice(0, questionLimit);
+      const picked = [];
+      shuffled(readingPassages.filter(passage => passage.bank === currentBank)).forEach(passage => {
+        const group = currentQuestionPool.filter(item => item.passageId === passage.id);
+        if (group.length && picked.length + group.length <= questionLimit) picked.push(...group);
+      });
+      return picked.length ? picked : currentQuestionPool.slice(0, questionLimit);
+    }
+
+    function orderReadingQuestions(items) {
+      const rank = id => readingPassages.findIndex(passage => passage.id === id);
+      return items.slice().sort((x, y) => rank(x.passageId) - rank(y.passageId) || x.sourceNumber - y.sourceNumber);
+    }
+
+    function randomButtonLabels() {
+      return isPassageBank()
+        ? [currentBank === "cloze" ? "Chọn ngẫu nhiên bài cloze" : "Chọn ngẫu nhiên bài đọc",
+        currentBank === "cloze" ? "Tạo đề ngẫu nhiên từ bài cloze" : "Tạo đề ngẫu nhiên từ bài đọc"]
+        : ["Chọn ngẫu nhiên " + questionLimit + " câu", "Tạo đề ngẫu nhiên " + questionLimit + " câu"];
+    }
+
+    function updateSelectionControls() {
+      const selectedCount = selectedQuestionNumbers.size;
+      selectionCount.textContent = selectedCount + " / " + questionLimit + " câu đã chọn";
+      selectionHelp.textContent = selectedCount > questionLimit
+        ? "Đang chọn vượt giới hạn " + questionLimit + " câu; hãy bỏ chọn " + (selectedCount - questionLimit) + " câu."
+        : "Chọn tối đa " + questionLimit + " câu cho đề này.";
+      createSelectedButton.disabled = selectedCount === 0 || selectedCount > questionLimit;
+      const labels = randomButtonLabels();
+      randomSelectButton.textContent = labels[0];
+      randomExamButton.textContent = labels[1];
+      randomSelectButton.disabled = currentQuestionPool.length === 0;
+      randomExamButton.disabled = currentQuestionPool.length === 0;
+      picker.querySelectorAll('.picker-label input[type="checkbox"]').forEach(input => {
+        const isSelected = selectedQuestionNumbers.has(Number(input.value));
+        input.checked = isSelected;
+        input.disabled = !isSelected && selectedCount >= questionLimit;
+        input.closest(".picker-row").classList.toggle("selected", isSelected);
+      });
+    }
+
+    function updateQuestionLimit() {
+      const enteredLimit = Number(questionLimitInput.value);
+      questionLimit = Number.isInteger(enteredLimit)
+        ? Math.max(1, Math.min(MAX_QUESTIONS, enteredLimit))
+        : MAX_QUESTIONS;
+      questionLimitInput.value = String(questionLimit);
+      updateSelectionControls();
+    }
+
+    function renderQuestionEditor(item) {
+      const editor = document.createElement("details");
+      editor.className = "question-editor";
+      const displayNumber = item.bankQuestionNumber || item.sourceNumber;
+      const summary = document.createElement("summary");
+      summary.textContent = "Sửa câu hỏi, lựa chọn và đáp án đúng";
+      const content = document.createElement("div");
+      content.className = "editor-content";
+
+      const promptLabel = document.createElement("label");
+      promptLabel.className = "editor-field";
+      promptLabel.append(document.createTextNode("Nội dung câu hỏi"));
+      const promptInput = document.createElement("textarea");
+      promptInput.className = "editor-question";
+      promptInput.rows = 2;
+      promptInput.value = item.q || "";
+      promptInput.placeholder = item.image ? "Câu hỏi dùng hình ảnh; có thể để trống." : "Nhập nội dung câu hỏi.";
+      promptInput.setAttribute("aria-label", "Nội dung câu hỏi " + displayNumber);
+      promptLabel.append(promptInput);
+      content.append(promptLabel);
+
+      const optionList = document.createElement("div");
+      optionList.className = "editor-answer-list";
+      item.a.forEach((answer, index) => {
+        const row = document.createElement("div");
+        row.className = "editor-answer-row";
+        const letter = document.createElement("span");
+        letter.className = "editor-answer-letter";
+        letter.textContent = String.fromCharCode(65 + index) + ".";
+        const answerInput = document.createElement("textarea");
+        answerInput.className = "editor-answer-input";
+        answerInput.rows = 2;
+        answerInput.value = answer;
+        answerInput.setAttribute("aria-label", "Lựa chọn " + String.fromCharCode(65 + index) + " câu " + displayNumber);
+        const correctLabel = document.createElement("label");
+        correctLabel.className = "correct-toggle";
+        const correctInput = document.createElement("input");
+        correctInput.className = "editor-correct";
+        correctInput.type = "checkbox";
+        correctInput.value = String(index);
+        correctInput.checked = Array.isArray(item.correctIndexes) && item.correctIndexes.includes(index);
+        correctLabel.append(correctInput, document.createTextNode(" Đúng"));
+        row.append(letter, answerInput, correctLabel);
+        optionList.append(row);
+      });
+      content.append(optionList);
+
+      const help = document.createElement("p");
+      help.className = "editor-help";
+      help.textContent = item.image
+        ? "Ảnh biển báo được giữ nguyên. Chọn một hoặc nhiều đáp án đúng; bỏ chọn hết nếu câu chưa có khóa."
+        : "Chọn một hoặc nhiều đáp án đúng; bỏ chọn hết nếu câu chưa có khóa.";
+      content.append(help);
+      const status = document.createElement("p");
+      status.className = "editor-status";
+      status.textContent = Array.isArray(item.correctIndexes) && item.correctIndexes.length
+        ? "Đã thiết lập đáp án chấm."
+        : "Chưa thiết lập đáp án chấm.";
+      content.append(status);
+
+      const actions = document.createElement("div");
+      actions.className = "editor-actions";
+      const saveButton = document.createElement("button");
+      saveButton.className = "primary";
+      saveButton.type = "button";
+      saveButton.dataset.editAction = "save";
+      saveButton.textContent = "Lưu thay đổi";
+      const resetButton = document.createElement("button");
+      resetButton.className = "secondary";
+      resetButton.type = "button";
+      resetButton.dataset.editAction = "reset";
+      resetButton.textContent = "Khôi phục câu gốc";
+      actions.append(saveButton, resetButton);
+      content.append(actions);
+      editor.append(summary, content);
+      return editor;
+    }
+
+    function renderQuestionPicker(openEditorSourceNumber = null) {
+      const query = questionSearch.value.trim().toLocaleLowerCase();
+      let lastPassageId = null;
+      const visibleQuestions = currentQuestionPool.filter(item => {
+        const passage = item.passageId ? readingPassageById(item.passageId) : null;
+        const searchable = [item.bankQuestionNumber || item.sourceNumber, item.q, ...item.a, passage ? passage.title : ""].join(" ").toLocaleLowerCase();
+        return searchable.includes(query);
+      });
+      picker.replaceChildren();
+      visibleCount.textContent = visibleQuestions.length + " / " + currentQuestionPool.length + " câu";
+
+      if (visibleQuestions.length === 0) {
+        const empty = document.createElement("p");
+        empty.className = "empty-search";
+        empty.textContent = currentQuestionPool.length === 0 && isPassageBank()
+          ? (currentBank === "cloze" ? "Chưa có bài cloze nào. Hãy thêm bài cloze mới ở mục \"+ Thêm bài cloze mới\" bên dưới." : "Chưa có bài đọc nào. Hãy thêm bài đọc mới ở bên dưới.")
+          : "Không tìm thấy câu hỏi phù hợp.";
+        picker.append(empty);
+        return;
+      }
+
+      visibleQuestions.forEach(item => {
+        if (isPassageBank() && item.passageId !== lastPassageId) {
+          lastPassageId = item.passageId;
+          const passage = readingPassageById(item.passageId);
+          if (passage) {
+            const group = document.createElement("div");
+            group.className = "passage-group";
+            const name = document.createElement("span");
+            const strong = document.createElement("strong");
+            strong.textContent = (passage.label ? passage.label + " · " : "") + passage.title;
+            const small = document.createElement("small");
+            small.textContent = currentQuestionPool.filter(q => q.passageId === passage.id).length + " câu";
+            name.append(strong, small);
+            const buttons = document.createElement("div");
+            buttons.className = "button-row";
+            const selectAll = document.createElement("button");
+            selectAll.type = "button";
+            selectAll.className = "primary";
+            selectAll.dataset.passageAction = "select";
+            selectAll.dataset.passageId = passage.id;
+            selectAll.textContent = "Chọn cả bài";
+            buttons.append(selectAll);
+            if (passage.custom) {
+              const remove = document.createElement("button");
+              remove.type = "button";
+              remove.className = "danger";
+              remove.dataset.passageAction = "delete";
+              remove.dataset.passageId = passage.id;
+              remove.textContent = "Xóa bài";
+              buttons.append(remove);
+            }
+            group.append(name, buttons);
+            const view = document.createElement("details");
+            view.className = "passage-card collapsible";
+            const viewSummary = document.createElement("summary");
+            viewSummary.textContent = currentBank === "cloze" ? "Xem bài cloze" : "Xem bài đọc";
+            const body = document.createElement("div");
+            body.className = "passage-body";
+            body.append(buildPassageBody(passage));
+            view.append(viewSummary, body);
+            picker.append(group, view);
+          }
+        }
+        const row = document.createElement("article");
+        row.className = "picker-row";
+        row.dataset.sourceNumber = String(item.sourceNumber);
+        const label = document.createElement("label");
+        label.className = "picker-label";
+        const checkbox = document.createElement("input");
+        checkbox.type = "checkbox";
+        checkbox.value = String(item.sourceNumber);
+        checkbox.checked = selectedQuestionNumbers.has(item.sourceNumber);
+        checkbox.disabled = !checkbox.checked && selectedQuestionNumbers.size >= questionLimit;
+        const number = document.createElement("span");
+        number.className = "picker-number";
+        const displayNumber = item.bankQuestionNumber || item.sourceNumber;
+        number.textContent = "#" + String(displayNumber).padStart(2, "0");
+        const prompt = document.createElement("span");
+        prompt.className = "picker-question";
+        prompt.textContent = item.q || "Hình biển báo / thông báo";
+        label.append(checkbox, number, prompt);
+        if (item.image) {
+          const thumbnail = document.createElement("img");
+          thumbnail.className = "picker-thumbnail";
+          thumbnail.src = item.image;
+          thumbnail.alt = "Hình biển báo câu " + displayNumber;
+          thumbnail.loading = "lazy";
+          row.append(label, thumbnail);
+        } else {
+          row.append(label);
+        }
+
+        const details = document.createElement("details");
+        details.className = "picker-options";
+        const summary = document.createElement("summary");
+        summary.textContent = "Xem lựa chọn A–D";
+        const choices = document.createElement("ul");
+        item.a.forEach((answer, index) => {
+          const choice = document.createElement("li");
+          choice.textContent = String.fromCharCode(65 + index) + ". " + answer;
+          choices.append(choice);
+        });
+        details.append(summary, choices);
+        row.append(details);
+        const keyStatus = document.createElement("p");
+        const hasAnswerKey = Array.isArray(item.correctIndexes) && item.correctIndexes.length > 0;
+        keyStatus.className = "key-status " + (hasAnswerKey ? "ready" : "missing");
+        keyStatus.textContent = hasAnswerKey
+          ? "Đã đặt đáp án đúng: " + item.correctIndexes.map(index => String.fromCharCode(65 + index)).join(", ")
+          : "Chưa đặt đáp án đúng";
+        row.append(keyStatus);
+        const questionEditor = renderQuestionEditor(item);
+        if (item.sourceNumber === openEditorSourceNumber) questionEditor.open = true;
+        row.append(questionEditor);
+        row.classList.toggle("selected", selectedQuestionNumbers.has(item.sourceNumber));
+        picker.append(row);
+      });
+      updateSelectionControls();
+    }
+
+    function renderQuestions(items) {
+      quiz.replaceChildren();
+      quiz.classList.toggle("single-col", currentBank === "reading");
+      let lastPassageId = null;
+      items.forEach((item, position) => {
+        if (item.passageId && item.passageId !== lastPassageId) {
+          lastPassageId = item.passageId;
+          const passage = readingPassageById(item.passageId);
+          if (passage) quiz.append(renderPassageCard(passage));
+        }
+        const card = document.createElement("article");
+        card.className = "question-card";
+        const head = document.createElement("div");
+        head.className = "question-head";
+        const number = document.createElement("span");
+        number.className = "number";
+        number.setAttribute("aria-hidden", "true");
+        number.textContent = String(position + 1);
+        const fieldset = document.createElement("fieldset");
+        const legend = document.createElement("legend");
+        const sourceNumber = item.bankQuestionNumber || item.sourceNumber;
+        legend.textContent = item.image ? "Question " + (position + 1) + ": sign or notice " + sourceNumber : "Question " + (position + 1) + ": " + item.q;
+        head.append(number);
+        fieldset.append(legend);
+        let sourceImage = null;
+        if (item.image) {
+          sourceImage = document.createElement("img");
+          sourceImage.className = "question-image";
+          sourceImage.src = item.image;
+          sourceImage.alt = "Sign or notice " + sourceNumber;
+        } else {
+          const prompt = document.createElement("p");
+          prompt.className = "prompt";
+          prompt.textContent = item.q;
+          head.append(prompt);
+        }
+        const options = document.createElement("div");
+        options.className = "options";
+        item.shuffledOptions.forEach((choice, j) => {
+          const letter = String.fromCharCode(65 + j);
+          const label = document.createElement("label");
+          label.className = "option";
+          const input = document.createElement("input");
+          input.type = "radio";
+          input.name = "attempt-q" + position;
+          input.value = String(choice.originalIndex);
+          const text = document.createElement("span");
+          const answerText = document.createElement("span");
+          answerText.className = "option-letter";
+          answerText.textContent = letter + ".";
+          text.append(answerText, document.createTextNode(" " + choice.text));
+          label.append(input, text);
+          options.append(label);
+        });
+        fieldset.append(options);
+        if (sourceImage) {
+          card.append(head, sourceImage);
+          if (item.q) {
+            const prompt = document.createElement("p");
+            prompt.className = "prompt";
+            prompt.textContent = item.q;
+            card.append(prompt);
+          }
+          card.append(fieldset);
+        } else {
+          card.append(head, fieldset);
+        }
+        quiz.append(card);
+      });
+      track.setAttribute("aria-valuemax", String(items.length));
+      updateProgress();
+    }
+
+    function startAttempt(items) {
+      if (items.length < 1 || items.length > questionLimit) return;
+      currentAttemptQuestions = items.map(cloneQuestion);
+      const ordered = isPassageBank() ? orderReadingQuestions(currentAttemptQuestions) : shuffled(currentAttemptQuestions);
+      activeQuestions = ordered.map(item => ({
+        ...item,
+        a: [...item.a],
+        shuffledOptions: isPassageBank()
+          ? item.a.map((text, originalIndex) => ({ text, originalIndex }))
+          : shuffled(item.a.map((text, originalIndex) => ({ text, originalIndex })))
+      }));
+      result.replaceChildren();
+      result.classList.remove("visible");
+      configScreen.hidden = true;
+      quizScreen.hidden = false;
+      headerCount.textContent = activeQuestions.length + " câu trong đề";
+      renderQuestions(activeQuestions);
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    function startRandomAttempt() {
+      const randomQuestions = pickRandomQuestions();
+      selectedQuestionNumbers.clear();
+      randomQuestions.forEach(item => selectedQuestionNumbers.add(item.sourceNumber));
+      updateSelectionControls();
+      startAttempt(randomQuestions);
+    }
+
+    function updateProgress() {
+      const answered = new Set(
+        Array.from(form.querySelectorAll('input[type="radio"]:checked')).map(input => input.name)
+      ).size;
+      count.textContent = answered + " / " + activeQuestions.length;
+      fill.style.width = (answered / activeQuestions.length * 100) + "%";
+      track.setAttribute("aria-valuenow", String(answered));
+      if (result.classList.contains("visible")) {
+        result.replaceChildren();
+        result.classList.remove("visible");
+      }
+    }
+
+    function makeRedoButton() {
+      const redoButton = document.createElement("button");
+      redoButton.className = "primary redo-button";
+      redoButton.type = "button";
+      redoButton.textContent = "Làm lại đề · trộn lại câu hỏi và đáp án";
+      redoButton.addEventListener("click", () => startAttempt(currentAttemptQuestions));
+      return redoButton;
+    }
+
+    function showScore(selectedAnswers) {
+      let correctCount = 0;
+      let gradedCount = 0;
+      let missingCount = 0;
+      activeQuestions.forEach((item, position) => {
+        const expectedIndexes = Array.isArray(item.correctIndexes) ? item.correctIndexes : [];
+        const selectedValue = selectedAnswers.get("attempt-q" + position);
+        const selectedIndex = selectedValue === undefined ? null : Number(selectedValue);
+        const hasAnswerKey = expectedIndexes.length > 0;
+        const isCorrect = hasAnswerKey && expectedIndexes.includes(selectedIndex);
+        if (hasAnswerKey) {
+          gradedCount += 1;
+          if (isCorrect) correctCount += 1;
+        } else {
+          missingCount += 1;
+        }
+
+        const card = quiz.querySelectorAll(".question-card")[position];
+        const labels = Array.from(card.querySelectorAll(".option"));
+        const correctChoices = [];
+        labels.forEach((label, optionIndex) => {
+          const choice = item.shuffledOptions[optionIndex];
+          const input = label.querySelector("input");
+          const isExpected = expectedIndexes.includes(choice.originalIndex);
+          input.disabled = true;
+          if (hasAnswerKey && isExpected) {
+            label.classList.add("correct-option");
+            correctChoices.push(String.fromCharCode(65 + optionIndex) + ". " + choice.text);
+          } else if (hasAnswerKey && input.checked) {
+            label.classList.add("wrong-option");
+          }
+        });
+
+        const feedback = document.createElement("p");
+        feedback.className = "feedback" + (hasAnswerKey && !isCorrect ? " incorrect" : "");
+        feedback.textContent = !hasAnswerKey
+          ? "— Chưa thiết lập đáp án đúng cho câu này."
+          : isCorrect
+            ? "✓ Đúng"
+            : "✗ Sai · Đáp án đúng: " + correctChoices.join(" / ");
+        card.append(feedback);
+      });
+
+      const summary = document.createElement("p");
+      summary.className = "score-summary";
+      if (missingCount === 0) {
+        summary.textContent = "Kết quả: " + correctCount + "/" + activeQuestions.length + " câu đúng.";
+      } else if (gradedCount === 0) {
+        summary.textContent = "Đã hoàn thành " + activeQuestions.length + " câu; chưa có câu nào được cài đáp án để chấm.";
+      } else {
+        summary.textContent = "Đã chấm " + gradedCount + "/" + activeQuestions.length + " câu: " + correctCount +
+          " câu đúng; " + missingCount + " câu chưa có đáp án đúng.";
+      }
+      const details = document.createElement("p");
+      details.className = "score-detail";
+      details.textContent = missingCount
+        ? "Câu chưa có khóa được ghi rõ là chưa chấm; hãy thiết lập đáp án trong phần cấu hình."
+        : "Đáp án đúng được tô xanh; lựa chọn sai được tô đỏ.";
+      result.replaceChildren(summary, details, makeRedoButton());
+      result.classList.add("visible");
+    }
+    function updateBankPresentation() {
+      const notices = currentBank === "signs";
+      const reading = currentBank === "reading";
+      const cloze = currentBank === "cloze";
+      const passageBank = reading || cloze;
+      const countFor = bank => readingPassages.filter(passage => passage.bank === bank).length + " bài · " + questionBanks[bank].length + " câu";
+      const readingCount = countFor("reading");
+      const clozeCount = countFor("cloze");
+      questionBankSelect.querySelector('option[value="reading"]').textContent = "Reading Passage (" + readingCount + ")";
+      questionBankSelect.querySelector('option[value="cloze"]').textContent = "Cloze Text (" + clozeCount + ")";
+      const bankTitle = reading ? "Reading Passage (" + readingCount + ")"
+        : cloze ? "Cloze Text (" + clozeCount + ")"
+          : notices ? "Signs and Notices (40 câu)" : "Vocabulary and Grammar (108 câu)";
+      document.getElementById("bank-section-title").textContent = "Chọn câu hỏi từ ngân hàng " + bankTitle;
+      document.getElementById("brand-bank").textContent = reading ? "READING • PASSAGE" : cloze ? "CLOZE • TEXT" : notices ? "SIGNS • NOTICES" : "VOCABULARY • GRAMMAR";
+      document.getElementById("config-instruction").textContent = reading
+        ? "Chọn cả bài đọc (hoặc từng câu) để tạo đề. Bài đọc hiển thị phía trên câu hỏi; có thể thêm bài đọc mới ở cuối trang."
+        : cloze
+          ? "Chọn cả bài cloze (hoặc từng chỗ trống) để tạo đề. Mỗi chỗ trống là một câu A–D; có thể thêm bài cloze mới ở cuối trang."
+          : notices
+            ? "Chọn từ 1 đến 30 câu để tạo đề. Có thể sửa các lựa chọn và chọn đáp án đúng cho từng hình biển báo."
+            : "Chọn từ 1 đến 30 câu để tạo đề. Có thể tìm, sửa nội dung và thiết lập đáp án đúng cho từng câu.";
+      document.getElementById("page-title").textContent = reading ? "Reading Passage" : cloze ? "Cloze Text" : notices ? "Signs and Notices" : "Vocabulary and Grammar";
+      document.getElementById("quiz-section-title").textContent = reading ? "Reading comprehension" : cloze ? "Cloze test" : notices ? "Read the signs and notices" : "A. Incomplete sentences";
+      document.getElementById("quiz-instruction").textContent = reading
+        ? READING_INSTRUCTION
+        : cloze
+          ? CLOZE_INSTRUCTION
+          : notices
+            ? "Choose the best answer A, B, C or D for each sign or notice."
+            : "Choose the best possible answer A, B, C or D for each sentence below.";
+      document.getElementById("quiz-notice-text").textContent = reading
+        ? "Đọc bài đọc rồi trả lời các câu hỏi bên dưới. Thứ tự câu và đáp án A–D giữ nguyên như đề gốc. Nộp bài để xem điểm và đáp án đúng."
+        : cloze
+          ? "Đọc đoạn văn có các chỗ trống đánh số, rồi chọn từ hoặc cụm từ phù hợp nhất cho từng chỗ trống bên dưới. Nộp bài để xem điểm và đáp án đúng."
+          : notices
+            ? "Sau khi nộp, câu đã thiết lập đáp án đúng sẽ được chấm; câu chưa có khóa sẽ hiển thị trạng thái chưa chấm."
+            : "Hoàn thành đủ số câu đã chọn để xem điểm và đối chiếu đáp án. Có thể chỉnh sửa nội dung và khóa chấm trong cấu hình.";
+      const labels = randomButtonLabels();
+      randomSelectButton.textContent = labels[0];
+      randomExamButton.textContent = labels[1];
+      randomSelectButton.disabled = currentQuestionPool.length === 0;
+      randomExamButton.disabled = currentQuestionPool.length === 0;
+      document.getElementById("reading-tools").hidden = !passageBank;
+      document.getElementById("rp-summary").textContent = cloze ? "+ Thêm bài cloze mới" : "+ Thêm bài đọc mới";
+      document.getElementById("rp-title-label").textContent = cloze ? "Tiêu đề bài cloze" : "Tiêu đề bài đọc";
+      document.getElementById("rp-text-label").textContent = cloze
+        ? "Nội dung bài (đánh dấu chỗ trống bằng (1), (2), ... ; cách đoạn bằng một dòng trống)"
+        : "Nội dung bài đọc (cách đoạn bằng một dòng trống)";
+      document.getElementById("rp-format-help").textContent = cloze
+        ? 'Định dạng mỗi chỗ trống: dòng "(số)" (hoặc "số."), 4 dòng A. B. C. D., rồi dòng "Answer: X". Cách giữa các chỗ trống bằng một dòng trống. Bỏ dòng Answer nếu chưa có đáp án.'
+        : 'Định dạng mỗi câu: dòng "số. câu hỏi", 4 dòng A. B. C. D., rồi dòng "Answer: X" (có thể ghi nhiều đáp án như "Answer: A, C"). Cách giữa các câu bằng một dòng trống. Bỏ dòng Answer nếu chưa có đáp án.';
+    }
+
+    function parseReadingQuestions(raw, cloze = false) {
+      const questions = [];
+      let current = null;
+      let target = null;
+      raw.replace(/\r/g, "").split("\n").forEach(line => {
+        const text = line.trim();
+        if (!text) return;
+        const answerMatch = text.match(/^(?:answers?|đáp án|dap an|ans)\s*[:：=-]\s*(.+)$/i);
+        const optionMatch = text.match(/^([A-Da-d])\s*[.)]\s*(.+)$/);
+        let questionMatch = text.match(/^(\d+)\s*[.)]\s*(.+)$/);
+        if (!questionMatch && cloze) {
+          const blankMatch = text.match(/^\(?(\d+)\)?\s*[.)]?$/);
+          if (blankMatch) questionMatch = [text, blankMatch[1], "(" + blankMatch[1] + ")"];
+        }
+        if (answerMatch && current) {
+          const letters = answerMatch[1].toUpperCase().match(/[A-D]/g) || [];
+          current.correctIndexes = [...new Set(letters.map(letter => letter.charCodeAt(0) - 65))];
+          target = null;
+        } else if (optionMatch && current && current.a.length < 4 && optionMatch[1].toUpperCase().charCodeAt(0) - 65 === current.a.length) {
+          current.a.push(optionMatch[2].trim());
+          target = { option: current.a.length - 1 };
+        } else if (questionMatch && (!current || current.a.length === 4)) {
+          current = { q: questionMatch[2].trim(), a: [] };
+          questions.push(current);
+          target = { question: true };
+        } else if (current && target) {
+          if (target.question) current.q += " " + text;
+          else current.a[target.option] += " " + text;
+        } else {
+          throw new Error("Không hiểu dòng: \"" + text.slice(0, 60) + "\"");
+        }
+      });
+      if (!questions.length) throw new Error("Chưa có câu hỏi nào.");
+      questions.forEach((item, index) => {
+        if (item.a.length !== 4) throw new Error("Câu " + (index + 1) + " cần đủ 4 lựa chọn A, B, C, D.");
+      });
+      return questions;
+    }
+
+    document.getElementById("reading-form").addEventListener("submit", event => {
+      event.preventDefault();
+      const status = document.getElementById("rp-status");
+      status.classList.remove("error");
+      const cloze = currentBank === "cloze";
+      const customStore = cloze ? customCloze : customReading;
+      const persistStore = cloze ? persistCustomCloze : persistCustomReading;
+      const sourceList = cloze ? clozeSourceQuestions : readingSourceQuestions;
+      let parsed;
+      try {
+        parsed = parseReadingQuestions(document.getElementById("rp-questions").value, cloze);
+      } catch (error) {
+        status.textContent = error.message;
+        status.classList.add("error");
+        return;
+      }
+      const paragraphs = document.getElementById("rp-text").value.replace(/\r/g, "").split(/\n\s*\n/)
+        .map(part => part.replace(/\s*\n\s*/g, " ").trim()).filter(Boolean);
+      if (!paragraphs.length) {
+        status.textContent = cloze ? "Cần nhập nội dung bài cloze." : "Cần nhập nội dung bài đọc.";
+        status.classList.add("error");
+        return;
+      }
+      const firstSource = customStore.nextSource;
+      customStore.nextSource += parsed.length;
+      const passage = {
+        id: (cloze ? "customcloze" : "custom") + firstSource,
+        custom: true,
+        title: document.getElementById("rp-title").value.trim(),
+        author: document.getElementById("rp-author").value.trim(),
+        paragraphs,
+        questions: parsed.map((item, index) => ({ ...item, sourceNumber: firstSource + index }))
+      };
+      customStore.passages.push(passage);
+      const before = sourceList.length;
+      addReadingPassage(passage, firstSource, cloze ? "cloze" : "reading");
+      renumberReading(sourceList);
+      sourceList.slice(before).forEach(item => {
+        sourceQuestionBanks[currentBank].push(cloneQuestion(item));
+        questionBanks[currentBank].push(cloneQuestion(item));
+      });
+      questionBanks[currentBank].forEach((item, index) => { item.bankQuestionNumber = index + 1; });
+      sourceQuestionBanks[currentBank].forEach((item, index) => { item.bankQuestionNumber = index + 1; });
+      const stored = persistStore();
+      event.target.reset();
+      status.textContent = stored
+        ? "Đã lưu " + (cloze ? "bài cloze" : "bài đọc") + " \"" + passage.title + "\" (" + parsed.length + " câu) trên trình duyệt này."
+        : "Không lưu được vào trình duyệt; bài chỉ còn trong phiên này.";
+      if (!stored) status.classList.add("error");
+      updateBankPresentation();
+      renderQuestionPicker();
+    });
+
+    function handlePassageAction(button) {
+      const passage = readingPassageById(button.dataset.passageId);
+      if (!passage) return;
+      if (button.dataset.passageAction === "select") {
+        const numbers = currentQuestionPool.filter(item => item.passageId === passage.id).map(item => item.sourceNumber);
+        const missing = numbers.filter(number => !selectedQuestionNumbers.has(number));
+        if (selectedQuestionNumbers.size + missing.length > questionLimit) {
+          selectionHelp.textContent = "Không đủ chỗ: bài này có " + numbers.length + " câu, hãy tăng giới hạn hoặc bỏ chọn bớt câu.";
+          return;
+        }
+        missing.forEach(number => selectedQuestionNumbers.add(number));
+        renderQuestionPicker();
+        return;
+      }
+      if (button.dataset.passageAction === "delete") {
+        const isCloze = passage.bank === "cloze";
+        if (!window.confirm("Xóa " + (isCloze ? "bài cloze" : "bài đọc") + " \"" + passage.title + "\" và các câu hỏi của bài?")) return;
+        const removed = new Set(passage.questions.map(item => item.sourceNumber));
+        readingPassages.splice(readingPassages.indexOf(passage), 1);
+        if (isCloze) customCloze.passages = customCloze.passages.filter(item => item.id !== passage.id);
+        else customReading.passages = customReading.passages.filter(item => item.id !== passage.id);
+        const bankKey = isCloze ? "cloze" : "reading";
+        [isCloze ? clozeSourceQuestions : readingSourceQuestions, sourceQuestionBanks[bankKey], questionBanks[bankKey]].forEach(bank => {
+          for (let i = bank.length - 1; i >= 0; i--) if (removed.has(bank[i].sourceNumber)) bank.splice(i, 1);
+          renumberReading(bank);
+        });
+        removed.forEach(number => {
+          selectedQuestionNumbers.delete(number);
+          delete savedQuestionEdits[bankKey + ":" + number];
+        });
+        if (isCloze) persistCustomCloze(); else persistCustomReading();
+        persistQuestionEdits();
+        updateBankPresentation();
+        renderQuestionPicker();
+      }
+    }
+
+    questionBankSelect.addEventListener("change", () => {
+      currentBank = questionBankSelect.value;
+      currentQuestionPool = questionBanks[currentBank];
+      selectedQuestionNumbers.clear();
+      questionSearch.value = "";
+      updateBankPresentation();
+      renderQuestionPicker();
+    });
+
+    picker.addEventListener("change", event => {
+      const input = event.target;
+      if (!input.matches('.picker-label input[type="checkbox"]')) return;
+      const sourceNumber = Number(input.value);
+      if (input.checked) {
+        if (selectedQuestionNumbers.size >= questionLimit) {
+          input.checked = false;
+          return;
+        }
+        selectedQuestionNumbers.add(sourceNumber);
+      } else {
+        selectedQuestionNumbers.delete(sourceNumber);
+      }
+      updateSelectionControls();
+    });
+    picker.addEventListener("click", event => {
+      const passageButton = event.target.closest("button[data-passage-action]");
+      if (passageButton) { handlePassageAction(passageButton); return; }
+      const button = event.target.closest("button[data-edit-action]");
+      if (!button) return;
+      const row = button.closest(".picker-row");
+      const sourceNumber = Number(row.dataset.sourceNumber);
+      const itemIndex = currentQuestionPool.findIndex(question => question.sourceNumber === sourceNumber);
+      const item = currentQuestionPool[itemIndex];
+      const status = row.querySelector(".editor-status");
+      const key = questionEditKey(currentBank, item);
+
+      if (button.dataset.editAction === "save") {
+        const answers = Array.from(row.querySelectorAll(".editor-answer-input")).map(input => input.value);
+        if (answers.length !== 4 || answers.some(answer => !answer.trim())) {
+          status.textContent = "Cần nhập đủ bốn lựa chọn A–D trước khi lưu.";
+          status.classList.add("error");
+          return;
+        }
+        item.q = row.querySelector(".editor-question").value;
+        item.a = answers;
+        item.correctIndexes = Array.from(row.querySelectorAll(".editor-correct:checked"))
+          .map(input => Number(input.value));
+        savedQuestionEdits[key] = {
+          q: item.q,
+          a: [...item.a],
+          correctIndexes: [...item.correctIndexes]
+        };
+        const stored = persistQuestionEdits();
+        renderQuestionPicker(sourceNumber);
+        const refreshedStatus = picker.querySelector('[data-source-number="' + sourceNumber + '"] .editor-status');
+        refreshedStatus.textContent = stored
+          ? "Đã lưu chỉnh sửa trên trình duyệt này."
+          : "Không lưu được vào trình duyệt; thay đổi chỉ còn trong phiên này.";
+        if (!stored) refreshedStatus.classList.add("error");
+        return;
+      }
+
+      if (button.dataset.editAction === "reset") {
+        const sourceQuestion = sourceQuestionBanks[currentBank].find(question => question.sourceNumber === sourceNumber);
+        currentQuestionPool[itemIndex] = cloneQuestion(sourceQuestion);
+        delete savedQuestionEdits[key];
+        const stored = persistQuestionEdits();
+        renderQuestionPicker(sourceNumber);
+        const refreshedStatus = picker.querySelector('[data-source-number="' + sourceNumber + '"] .editor-status');
+        refreshedStatus.textContent = stored
+          ? "Đã khôi phục nội dung và khóa gốc."
+          : "Đã khôi phục trong phiên này; không lưu được vào trình duyệt.";
+        if (!stored) refreshedStatus.classList.add("error");
+      }
+    });
+    questionSearch.addEventListener("input", renderQuestionPicker);
+    randomSelectButton.addEventListener("click", () => {
+      selectedQuestionNumbers.clear();
+      pickRandomQuestions().forEach(item => selectedQuestionNumbers.add(item.sourceNumber));
+      renderQuestionPicker();
+    });
+    questionLimitInput.addEventListener("change", updateQuestionLimit);
+    document.getElementById("clear-selection-button").addEventListener("click", () => {
+      selectedQuestionNumbers.clear();
+      updateSelectionControls();
+    });
+    createSelectedButton.addEventListener("click", () => {
+      const selectedQuestions = currentQuestionPool.filter(item => selectedQuestionNumbers.has(item.sourceNumber));
+      startAttempt(selectedQuestions);
+    });
+    randomExamButton.addEventListener("click", startRandomAttempt);
+    configureButton.addEventListener("click", () => {
+      quizScreen.hidden = true;
+      configScreen.hidden = false;
+      headerCount.textContent = "Cấu hình đề";
+      renderQuestionPicker();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+    form.addEventListener("change", updateProgress);
+    form.addEventListener("submit", event => {
+      event.preventDefault();
+      const selectedAnswers = new Map(
+        Array.from(form.querySelectorAll('input[type="radio"]:checked')).map(input => [input.name, input.value])
+      );
+      const left = activeQuestions.length - selectedAnswers.size;
+      if (left > 0) {
+        result.textContent = "Chưa hoàn thành: còn " + left + " câu chưa chọn. Hoàn thành đủ " + activeQuestions.length + " câu để xem kết quả.";
+        result.classList.add("visible");
+        result.scrollIntoView({ behavior: "smooth", block: "nearest" });
+        return;
+      }
+      showScore(selectedAnswers);
+      result.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    });
+
+    updateBankPresentation();
+    renderQuestionPicker();
+    updateSelectionControls();
+  </script>
+</body>
+
+</html>
